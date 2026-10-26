@@ -1,0 +1,1608 @@
+{
+  "cases": [],
+  "checkpoint_sha256": "3f002a46900bc754196e0e395457e70bbea5dbcfc06f88924de683208ed4bd3a",
+  "config": {
+    "batch_size": 1,
+    "epochs": 30,
+    "lr": 0.0002,
+    "model": {
+      "depth": 6,
+      "hop": 256,
+      "n_fft": 512,
+      "width": 64
+    },
+    "seed": 2026
+  },
+  "epoch": 29,
+  "evaluation_manifest_sha256": "08d960e741133f37b711606a954a51c15a944e904701d3f910a1bb2f98091f5e",
+  "geometry_predictions": [
+    {
+      "absolute_tdoa_separation_samples": 0.33660609117948703,
+      "id": "test_00000",
+      "noise_angle": -84.375,
+      "noise_tdoa_samples": 0.9284520249040779,
+      "speech_angle": -39.375,
+      "speech_tdoa_samples": 0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.3325500949440758,
+      "id": "test_00001",
+      "noise_angle": -28.125,
+      "noise_tdoa_samples": 0.4397794418956981,
+      "speech_angle": 73.125,
+      "speech_tdoa_samples": -0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.1836918674491816,
+      "id": "test_00002",
+      "noise_angle": 39.375,
+      "noise_tdoa_samples": -0.5918459337245908,
+      "speech_angle": -39.375,
+      "speech_tdoa_samples": 0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.414625557474689,
+      "id": "test_00003",
+      "noise_angle": 61.875,
+      "noise_tdoa_samples": -0.8227796237500983,
+      "speech_angle": -39.375,
+      "speech_tdoa_samples": 0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.0699910292982795,
+      "id": "test_00004",
+      "noise_angle": -61.875,
+      "noise_tdoa_samples": 0.8227796237500983,
+      "speech_angle": -73.125,
+      "speech_tdoa_samples": 0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.0935936367809713,
+      "id": "test_00005",
+      "noise_angle": 16.875,
+      "noise_tdoa_samples": -0.27081401303087294,
+      "speech_angle": -61.875,
+      "speech_tdoa_samples": 0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.36225656292478603,
+      "id": "test_00006",
+      "noise_angle": 5.625,
+      "noise_tdoa_samples": -0.0914425498939131,
+      "speech_angle": -16.875,
+      "speech_tdoa_samples": 0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.9842132029422909,
+      "id": "test_00007",
+      "noise_angle": 5.625,
+      "noise_tdoa_samples": -0.0914425498939131,
+      "speech_angle": -73.125,
+      "speech_tdoa_samples": 0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.0198945747979908,
+      "id": "test_00008",
+      "noise_angle": 5.625,
+      "noise_tdoa_samples": -0.0914425498939131,
+      "speech_angle": -84.375,
+      "speech_tdoa_samples": 0.9284520249040779
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.23093369002550745,
+      "id": "test_00009",
+      "noise_angle": -61.875,
+      "noise_tdoa_samples": 0.8227796237500983,
+      "speech_angle": -39.375,
+      "speech_tdoa_samples": 0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.5416280260617459,
+      "id": "test_00010",
+      "noise_angle": -16.875,
+      "noise_tdoa_samples": 0.27081401303087294,
+      "speech_angle": 16.875,
+      "speech_tdoa_samples": -0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.5519656107192253,
+      "id": "test_00011",
+      "noise_angle": 61.875,
+      "noise_tdoa_samples": -0.8227796237500983,
+      "speech_angle": 16.875,
+      "speech_tdoa_samples": -0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.0699910292982795,
+      "id": "test_00012",
+      "noise_angle": 61.875,
+      "noise_tdoa_samples": -0.8227796237500983,
+      "speech_angle": 73.125,
+      "speech_tdoa_samples": -0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.812612033181214,
+      "id": "test_00013",
+      "noise_angle": -50.625,
+      "noise_tdoa_samples": 0.7211694832873009,
+      "speech_angle": 5.625,
+      "speech_tdoa_samples": -0.0914425498939131
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.23093369002550745,
+      "id": "test_00014",
+      "noise_angle": 61.875,
+      "noise_tdoa_samples": -0.8227796237500983,
+      "speech_angle": 39.375,
+      "speech_tdoa_samples": -0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.199266037934951,
+      "id": "test_00015",
+      "noise_angle": 84.375,
+      "noise_tdoa_samples": -0.9284520249040779,
+      "speech_angle": -16.875,
+      "speech_tdoa_samples": 0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.23093369002550745,
+      "id": "test_00016",
+      "noise_angle": -61.875,
+      "noise_tdoa_samples": 0.8227796237500983,
+      "speech_angle": -39.375,
+      "speech_tdoa_samples": 0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.8569040498081557,
+      "id": "test_00017",
+      "noise_angle": -84.375,
+      "noise_tdoa_samples": 0.9284520249040779,
+      "speech_angle": 84.375,
+      "speech_tdoa_samples": -0.9284520249040779
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.8370094750101648,
+      "id": "test_00018",
+      "noise_angle": 84.375,
+      "noise_tdoa_samples": -0.9284520249040779,
+      "speech_angle": 5.625,
+      "speech_tdoa_samples": -0.0914425498939131
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.8795588837913962,
+      "id": "test_00019",
+      "noise_angle": -28.125,
+      "noise_tdoa_samples": 0.4397794418956981,
+      "speech_angle": 28.125,
+      "speech_tdoa_samples": -0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.5004033838306777,
+      "id": "test_00020",
+      "noise_angle": 39.375,
+      "noise_tdoa_samples": -0.5918459337245908,
+      "speech_angle": 5.625,
+      "speech_tdoa_samples": -0.0914425498939131
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.3325500949440758,
+      "id": "test_00021",
+      "noise_angle": -28.125,
+      "noise_tdoa_samples": 0.4397794418956981,
+      "speech_angle": 73.125,
+      "speech_tdoa_samples": -0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.8370094750101648,
+      "id": "test_00022",
+      "noise_angle": 84.375,
+      "noise_tdoa_samples": -0.9284520249040779,
+      "speech_angle": 5.625,
+      "speech_tdoa_samples": -0.0914425498939131
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.12932354956271008,
+      "id": "test_00023",
+      "noise_angle": -39.375,
+      "noise_tdoa_samples": 0.5918459337245908,
+      "speech_angle": -50.625,
+      "speech_tdoa_samples": 0.7211694832873009
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.6297269333933878,
+      "id": "test_00024",
+      "noise_angle": -5.625,
+      "noise_tdoa_samples": 0.0914425498939131,
+      "speech_angle": -50.625,
+      "speech_tdoa_samples": 0.7211694832873009
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.6576380118732049,
+      "id": "test_00025",
+      "noise_angle": 84.375,
+      "noise_tdoa_samples": -0.9284520249040779,
+      "speech_angle": 16.875,
+      "speech_tdoa_samples": -0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.8795588837913962,
+      "id": "test_00026",
+      "noise_angle": 28.125,
+      "noise_tdoa_samples": -0.4397794418956981,
+      "speech_angle": -28.125,
+      "speech_tdoa_samples": 0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.9142221736440114,
+      "id": "test_00027",
+      "noise_angle": 61.875,
+      "noise_tdoa_samples": -0.8227796237500983,
+      "speech_angle": -5.625,
+      "speech_tdoa_samples": 0.0914425498939131
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.7105934549265711,
+      "id": "test_00028",
+      "noise_angle": -28.125,
+      "noise_tdoa_samples": 0.4397794418956981,
+      "speech_angle": 16.875,
+      "speech_tdoa_samples": -0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.36225656292478603,
+      "id": "test_00029",
+      "noise_angle": 16.875,
+      "noise_tdoa_samples": -0.27081401303087294,
+      "speech_angle": -5.625,
+      "speech_tdoa_samples": 0.0914425498939131
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.348336892001785,
+      "id": "test_00030",
+      "noise_angle": 5.625,
+      "noise_tdoa_samples": -0.0914425498939131,
+      "speech_angle": 28.125,
+      "speech_tdoa_samples": -0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.3210319206937179,
+      "id": "test_00031",
+      "noise_angle": -39.375,
+      "noise_tdoa_samples": 0.5918459337245908,
+      "speech_angle": -16.875,
+      "speech_tdoa_samples": 0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.2813900413916028,
+      "id": "test_00032",
+      "noise_angle": -50.625,
+      "noise_tdoa_samples": 0.7211694832873009,
+      "speech_angle": -28.125,
+      "speech_tdoa_samples": 0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.7105934549265711,
+      "id": "test_00033",
+      "noise_angle": -28.125,
+      "noise_tdoa_samples": 0.4397794418956981,
+      "speech_angle": 16.875,
+      "speech_tdoa_samples": -0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.3210319206937179,
+      "id": "test_00034",
+      "noise_angle": -39.375,
+      "noise_tdoa_samples": 0.5918459337245908,
+      "speech_angle": -16.875,
+      "speech_tdoa_samples": 0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.5439491070373992,
+      "id": "test_00035",
+      "noise_angle": -50.625,
+      "noise_tdoa_samples": 0.7211694832873009,
+      "speech_angle": 61.875,
+      "speech_tdoa_samples": -0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.414625557474689,
+      "id": "test_00036",
+      "noise_angle": -39.375,
+      "noise_tdoa_samples": 0.5918459337245908,
+      "speech_angle": 61.875,
+      "speech_tdoa_samples": -0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.17160116976106643,
+      "id": "test_00037",
+      "noise_angle": 73.125,
+      "noise_tdoa_samples": -0.8927706530483778,
+      "speech_angle": 50.625,
+      "speech_tdoa_samples": -0.7211694832873113
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.1635846660792506,
+      "id": "test_00038",
+      "noise_angle": -73.125,
+      "noise_tdoa_samples": 0.8927706530483778,
+      "speech_angle": 16.875,
+      "speech_tdoa_samples": -0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.17160116976106643,
+      "id": "test_00039",
+      "noise_angle": 50.625,
+      "noise_tdoa_samples": -0.7211694832873113,
+      "speech_angle": 73.125,
+      "speech_tdoa_samples": -0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.8626599467554638,
+      "id": "test_00040",
+      "noise_angle": 16.875,
+      "noise_tdoa_samples": -0.27081401303087294,
+      "speech_angle": -39.375,
+      "speech_tdoa_samples": 0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.4423389665746122,
+      "id": "test_00041",
+      "noise_angle": -50.625,
+      "noise_tdoa_samples": 0.7211694832873009,
+      "speech_angle": 50.625,
+      "speech_tdoa_samples": -0.7211694832873113
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.035681371855700084,
+      "id": "test_00042",
+      "noise_angle": -73.125,
+      "noise_tdoa_samples": 0.8927706530483778,
+      "speech_angle": -84.375,
+      "speech_tdoa_samples": 0.9284520249040779
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.6139401363356787,
+      "id": "test_00043",
+      "noise_angle": -50.625,
+      "noise_tdoa_samples": 0.7211694832873009,
+      "speech_angle": 73.125,
+      "speech_tdoa_samples": -0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.5312219917896113,
+      "id": "test_00044",
+      "noise_angle": 5.625,
+      "noise_tdoa_samples": -0.0914425498939131,
+      "speech_angle": -28.125,
+      "speech_tdoa_samples": 0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.4846165867729686,
+      "id": "test_00045",
+      "noise_angle": -39.375,
+      "noise_tdoa_samples": 0.5918459337245908,
+      "speech_angle": 73.125,
+      "speech_tdoa_samples": -0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.199266037934951,
+      "id": "test_00046",
+      "noise_angle": -84.375,
+      "noise_tdoa_samples": 0.9284520249040779,
+      "speech_angle": 16.875,
+      "speech_tdoa_samples": -0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.5519656107192253,
+      "id": "test_00047",
+      "noise_angle": 61.875,
+      "noise_tdoa_samples": -0.8227796237500983,
+      "speech_angle": 16.875,
+      "speech_tdoa_samples": -0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.5004033838306777,
+      "id": "test_00048",
+      "noise_angle": 5.625,
+      "noise_tdoa_samples": -0.0914425498939131,
+      "speech_angle": 39.375,
+      "speech_tdoa_samples": -0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.9919834963181843,
+      "id": "test_00049",
+      "noise_angle": 50.625,
+      "noise_tdoa_samples": -0.7211694832873113,
+      "speech_angle": -16.875,
+      "speech_tdoa_samples": 0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.1609489251830094,
+      "id": "test_00050",
+      "noise_angle": 50.625,
+      "noise_tdoa_samples": -0.7211694832873113,
+      "speech_angle": -28.125,
+      "speech_tdoa_samples": 0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.414625557474689,
+      "id": "test_00051",
+      "noise_angle": -61.875,
+      "noise_tdoa_samples": 0.8227796237500983,
+      "speech_angle": 39.375,
+      "speech_tdoa_samples": -0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.9842132029422909,
+      "id": "test_00052",
+      "noise_angle": 5.625,
+      "noise_tdoa_samples": -0.0914425498939131,
+      "speech_angle": -73.125,
+      "speech_tdoa_samples": 0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.2625590656457963,
+      "id": "test_00053",
+      "noise_angle": -28.125,
+      "noise_tdoa_samples": 0.4397794418956981,
+      "speech_angle": 61.875,
+      "speech_tdoa_samples": -0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.3325500949440758,
+      "id": "test_00054",
+      "noise_angle": -73.125,
+      "noise_tdoa_samples": 0.8927706530483778,
+      "speech_angle": 28.125,
+      "speech_tdoa_samples": -0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.6455592475001966,
+      "id": "test_00055",
+      "noise_angle": -61.875,
+      "noise_tdoa_samples": 0.8227796237500983,
+      "speech_angle": 61.875,
+      "speech_tdoa_samples": -0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.1635846660792506,
+      "id": "test_00056",
+      "noise_angle": -73.125,
+      "noise_tdoa_samples": 0.8927706530483778,
+      "speech_angle": 16.875,
+      "speech_tdoa_samples": -0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.715550276798476,
+      "id": "test_00057",
+      "noise_angle": -73.125,
+      "noise_tdoa_samples": 0.8927706530483778,
+      "speech_angle": 61.875,
+      "speech_tdoa_samples": -0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.9919834963181843,
+      "id": "test_00058",
+      "noise_angle": -16.875,
+      "noise_tdoa_samples": 0.27081401303087294,
+      "speech_angle": 50.625,
+      "speech_tdoa_samples": -0.7211694832873113
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.6297269333933878,
+      "id": "test_00059",
+      "noise_angle": -50.625,
+      "noise_tdoa_samples": 0.7211694832873009,
+      "speech_angle": -5.625,
+      "speech_tdoa_samples": 0.0914425498939131
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.7512316486541761,
+      "id": "test_00060",
+      "noise_angle": -84.375,
+      "noise_tdoa_samples": 0.9284520249040779,
+      "speech_angle": 61.875,
+      "speech_tdoa_samples": -0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.1520664918288927,
+      "id": "test_00061",
+      "noise_angle": -39.375,
+      "noise_tdoa_samples": 0.5918459337245908,
+      "speech_angle": -28.125,
+      "speech_tdoa_samples": 0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.0198945747979908,
+      "id": "test_00062",
+      "noise_angle": -5.625,
+      "noise_tdoa_samples": 0.0914425498939131,
+      "speech_angle": 84.375,
+      "speech_tdoa_samples": -0.9284520249040779
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.1635846660792506,
+      "id": "test_00063",
+      "noise_angle": -16.875,
+      "noise_tdoa_samples": 0.27081401303087294,
+      "speech_angle": 73.125,
+      "speech_tdoa_samples": -0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.38300018185440016,
+      "id": "test_00064",
+      "noise_angle": -61.875,
+      "noise_tdoa_samples": 0.8227796237500983,
+      "speech_angle": -28.125,
+      "speech_tdoa_samples": 0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.0935936367809713,
+      "id": "test_00065",
+      "noise_angle": -16.875,
+      "noise_tdoa_samples": 0.27081401303087294,
+      "speech_angle": 61.875,
+      "speech_tdoa_samples": -0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.5439491070374096,
+      "id": "test_00066",
+      "noise_angle": 50.625,
+      "noise_tdoa_samples": -0.7211694832873113,
+      "speech_angle": -61.875,
+      "speech_tdoa_samples": 0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.3130154170119022,
+      "id": "test_00067",
+      "noise_angle": 50.625,
+      "noise_tdoa_samples": -0.7211694832873113,
+      "speech_angle": -39.375,
+      "speech_tdoa_samples": 0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.5439491070374096,
+      "id": "test_00068",
+      "noise_angle": -61.875,
+      "noise_tdoa_samples": 0.8227796237500983,
+      "speech_angle": 50.625,
+      "speech_tdoa_samples": -0.7211694832873113
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.0198945747979908,
+      "id": "test_00069",
+      "noise_angle": -5.625,
+      "noise_tdoa_samples": 0.0914425498939131,
+      "speech_angle": 84.375,
+      "speech_tdoa_samples": -0.9284520249040779
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.1635846660792506,
+      "id": "test_00070",
+      "noise_angle": -73.125,
+      "noise_tdoa_samples": 0.8927706530483778,
+      "speech_angle": 16.875,
+      "speech_tdoa_samples": -0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.23093369002550745,
+      "id": "test_00071",
+      "noise_angle": 61.875,
+      "noise_tdoa_samples": -0.8227796237500983,
+      "speech_angle": 39.375,
+      "speech_tdoa_samples": -0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.3325500949440758,
+      "id": "test_00072",
+      "noise_angle": -73.125,
+      "noise_tdoa_samples": 0.8927706530483778,
+      "speech_angle": 28.125,
+      "speech_tdoa_samples": -0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.4423389665746122,
+      "id": "test_00073",
+      "noise_angle": 50.625,
+      "noise_tdoa_samples": -0.7211694832873113,
+      "speech_angle": -50.625,
+      "speech_tdoa_samples": 0.7211694832873009
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.2072825416167665,
+      "id": "test_00074",
+      "noise_angle": 84.375,
+      "noise_tdoa_samples": -0.9284520249040779,
+      "speech_angle": 50.625,
+      "speech_tdoa_samples": -0.7211694832873113
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.48867258300837974,
+      "id": "test_00075",
+      "noise_angle": 28.125,
+      "noise_tdoa_samples": -0.4397794418956981,
+      "speech_angle": 84.375,
+      "speech_tdoa_samples": -0.9284520249040779
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.6832884836185039,
+      "id": "test_00076",
+      "noise_angle": -5.625,
+      "noise_tdoa_samples": 0.0914425498939131,
+      "speech_angle": 39.375,
+      "speech_tdoa_samples": -0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.45035547025642797,
+      "id": "test_00077",
+      "noise_angle": -50.625,
+      "noise_tdoa_samples": 0.7211694832873009,
+      "speech_angle": -16.875,
+      "speech_tdoa_samples": 0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.2625590656457963,
+      "id": "test_00078",
+      "noise_angle": -61.875,
+      "noise_tdoa_samples": 0.8227796237500983,
+      "speech_angle": 28.125,
+      "speech_tdoa_samples": -0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.6297269333933878,
+      "id": "test_00079",
+      "noise_angle": -50.625,
+      "noise_tdoa_samples": 0.7211694832873009,
+      "speech_angle": -5.625,
+      "speech_tdoa_samples": 0.0914425498939131
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.9919834963181843,
+      "id": "test_00080",
+      "noise_angle": 50.625,
+      "noise_tdoa_samples": -0.7211694832873113,
+      "speech_angle": -16.875,
+      "speech_tdoa_samples": 0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.368231466799776,
+      "id": "test_00081",
+      "noise_angle": 28.125,
+      "noise_tdoa_samples": -0.4397794418956981,
+      "speech_angle": -84.375,
+      "speech_tdoa_samples": 0.9284520249040779
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.5312219917896113,
+      "id": "test_00082",
+      "noise_angle": -5.625,
+      "noise_tdoa_samples": 0.0914425498939131,
+      "speech_angle": 28.125,
+      "speech_tdoa_samples": -0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.33660609117948703,
+      "id": "test_00083",
+      "noise_angle": -39.375,
+      "noise_tdoa_samples": 0.5918459337245908,
+      "speech_angle": -84.375,
+      "speech_tdoa_samples": 0.9284520249040779
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.3325500949440758,
+      "id": "test_00084",
+      "noise_angle": 73.125,
+      "noise_tdoa_samples": -0.8927706530483778,
+      "speech_angle": -28.125,
+      "speech_tdoa_samples": 0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.6576380118732049,
+      "id": "test_00085",
+      "noise_angle": -16.875,
+      "noise_tdoa_samples": 0.27081401303087294,
+      "speech_angle": -84.375,
+      "speech_tdoa_samples": 0.9284520249040779
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.5004033838306777,
+      "id": "test_00086",
+      "noise_angle": -5.625,
+      "noise_tdoa_samples": 0.0914425498939131,
+      "speech_angle": -39.375,
+      "speech_tdoa_samples": 0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.38300018185440016,
+      "id": "test_00087",
+      "noise_angle": -61.875,
+      "noise_tdoa_samples": 0.8227796237500983,
+      "speech_angle": -28.125,
+      "speech_tdoa_samples": 0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.2813900413916028,
+      "id": "test_00088",
+      "noise_angle": -50.625,
+      "noise_tdoa_samples": 0.7211694832873009,
+      "speech_angle": -28.125,
+      "speech_tdoa_samples": 0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.3210319206937179,
+      "id": "test_00089",
+      "noise_angle": -39.375,
+      "noise_tdoa_samples": 0.5918459337245908,
+      "speech_angle": -16.875,
+      "speech_tdoa_samples": 0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.38300018185440016,
+      "id": "test_00090",
+      "noise_angle": -28.125,
+      "noise_tdoa_samples": 0.4397794418956981,
+      "speech_angle": -61.875,
+      "speech_tdoa_samples": 0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.8370094750101648,
+      "id": "test_00091",
+      "noise_angle": -84.375,
+      "noise_tdoa_samples": 0.9284520249040779,
+      "speech_angle": -5.625,
+      "speech_tdoa_samples": 0.0914425498939131
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.4503554702564384,
+      "id": "test_00092",
+      "noise_angle": 50.625,
+      "noise_tdoa_samples": -0.7211694832873113,
+      "speech_angle": 16.875,
+      "speech_tdoa_samples": -0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.4423389665746122,
+      "id": "test_00093",
+      "noise_angle": -50.625,
+      "noise_tdoa_samples": 0.7211694832873009,
+      "speech_angle": 50.625,
+      "speech_tdoa_samples": -0.7211694832873113
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.5312219917896113,
+      "id": "test_00094",
+      "noise_angle": -28.125,
+      "noise_tdoa_samples": 0.4397794418956981,
+      "speech_angle": 5.625,
+      "speech_tdoa_samples": -0.0914425498939131
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.0699910292982795,
+      "id": "test_00095",
+      "noise_angle": 73.125,
+      "noise_tdoa_samples": -0.8927706530483778,
+      "speech_angle": 61.875,
+      "speech_tdoa_samples": -0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.1836918674491816,
+      "id": "test_00096",
+      "noise_angle": 39.375,
+      "noise_tdoa_samples": -0.5918459337245908,
+      "speech_angle": -39.375,
+      "speech_tdoa_samples": 0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.0699910292982795,
+      "id": "test_00097",
+      "noise_angle": 73.125,
+      "noise_tdoa_samples": -0.8927706530483778,
+      "speech_angle": 61.875,
+      "speech_tdoa_samples": -0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.10161014046278694,
+      "id": "test_00098",
+      "noise_angle": 50.625,
+      "noise_tdoa_samples": -0.7211694832873113,
+      "speech_angle": 61.875,
+      "speech_tdoa_samples": -0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.8212226779524556,
+      "id": "test_00099",
+      "noise_angle": 84.375,
+      "noise_tdoa_samples": -0.9284520249040779,
+      "speech_angle": -73.125,
+      "speech_tdoa_samples": 0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.12932354956272052,
+      "id": "test_00100",
+      "noise_angle": 39.375,
+      "noise_tdoa_samples": -0.5918459337245908,
+      "speech_angle": 50.625,
+      "speech_tdoa_samples": -0.7211694832873113
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.1828850997878262,
+      "id": "test_00101",
+      "noise_angle": 5.625,
+      "noise_tdoa_samples": -0.0914425498939131,
+      "speech_angle": -5.625,
+      "speech_tdoa_samples": 0.0914425498939131
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.9919834963181843,
+      "id": "test_00102",
+      "noise_angle": 50.625,
+      "noise_tdoa_samples": -0.7211694832873113,
+      "speech_angle": -16.875,
+      "speech_tdoa_samples": 0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.6139401363356787,
+      "id": "test_00103",
+      "noise_angle": 73.125,
+      "noise_tdoa_samples": -0.8927706530483778,
+      "speech_angle": -50.625,
+      "speech_tdoa_samples": 0.7211694832873009
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.7512316486541761,
+      "id": "test_00104",
+      "noise_angle": 61.875,
+      "noise_tdoa_samples": -0.8227796237500983,
+      "speech_angle": -84.375,
+      "speech_tdoa_samples": 0.9284520249040779
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.12932354956271008,
+      "id": "test_00105",
+      "noise_angle": -39.375,
+      "noise_tdoa_samples": 0.5918459337245908,
+      "speech_angle": -50.625,
+      "speech_tdoa_samples": 0.7211694832873009
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.23093369002550745,
+      "id": "test_00106",
+      "noise_angle": 61.875,
+      "noise_tdoa_samples": -0.8227796237500983,
+      "speech_angle": 39.375,
+      "speech_tdoa_samples": -0.5918459337245908
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.4846165867729686,
+      "id": "test_00107",
+      "noise_angle": -39.375,
+      "noise_tdoa_samples": 0.5918459337245908,
+      "speech_angle": 73.125,
+      "speech_tdoa_samples": -0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.7105934549265711,
+      "id": "test_00108",
+      "noise_angle": 28.125,
+      "noise_tdoa_samples": -0.4397794418956981,
+      "speech_angle": -16.875,
+      "speech_tdoa_samples": 0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.199266037934951,
+      "id": "test_00109",
+      "noise_angle": 16.875,
+      "noise_tdoa_samples": -0.27081401303087294,
+      "speech_angle": -84.375,
+      "speech_tdoa_samples": 0.9284520249040779
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.160948925182999,
+      "id": "test_00110",
+      "noise_angle": -50.625,
+      "noise_tdoa_samples": 0.7211694832873009,
+      "speech_angle": 28.125,
+      "speech_tdoa_samples": -0.4397794418956981
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.035681371855700084,
+      "id": "test_00111",
+      "noise_angle": 84.375,
+      "noise_tdoa_samples": -0.9284520249040779,
+      "speech_angle": 73.125,
+      "speech_tdoa_samples": -0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.715550276798476,
+      "id": "test_00112",
+      "noise_angle": 73.125,
+      "noise_tdoa_samples": -0.8927706530483778,
+      "speech_angle": -61.875,
+      "speech_tdoa_samples": 0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.0198945747979908,
+      "id": "test_00113",
+      "noise_angle": -5.625,
+      "noise_tdoa_samples": 0.0914425498939131,
+      "speech_angle": 84.375,
+      "speech_tdoa_samples": -0.9284520249040779
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.23093369002550745,
+      "id": "test_00114",
+      "noise_angle": 39.375,
+      "noise_tdoa_samples": -0.5918459337245908,
+      "speech_angle": 61.875,
+      "speech_tdoa_samples": -0.8227796237500983
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.36225656292478603,
+      "id": "test_00115",
+      "noise_angle": -5.625,
+      "noise_tdoa_samples": 0.0914425498939131,
+      "speech_angle": 16.875,
+      "speech_tdoa_samples": -0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 1.715550276798476,
+      "id": "test_00116",
+      "noise_angle": -61.875,
+      "noise_tdoa_samples": 0.8227796237500983,
+      "speech_angle": 73.125,
+      "speech_tdoa_samples": -0.8927706530483778
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.9842132029422909,
+      "id": "test_00117",
+      "noise_angle": 73.125,
+      "noise_tdoa_samples": -0.8927706530483778,
+      "speech_angle": -5.625,
+      "speech_tdoa_samples": 0.0914425498939131
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.4503554702564384,
+      "id": "test_00118",
+      "noise_angle": 50.625,
+      "noise_tdoa_samples": -0.7211694832873113,
+      "speech_angle": 16.875,
+      "speech_tdoa_samples": -0.27081401303087294
+    },
+    {
+      "absolute_tdoa_separation_samples": 0.6219566400175048,
+      "id": "test_00119",
+      "noise_angle": -16.875,
+      "noise_tdoa_samples": 0.27081401303087294,
+      "speech_angle": -73.125,
+      "speech_tdoa_samples": 0.8927706530483778
+    }
+  ],
+  "geometry_summary": {
+    "below_0_1_samples": 6,
+    "below_0_25_samples": 21,
+    "cases": 120,
+    "separation_samples_quantiles": [
+      0.035681371855700084,
+      0.36225656292478603,
+      0.8370094750101648,
+      1.2150892948626622,
+      1.8569040498081557
+    ],
+    "source": "manifest angles with documented V1 geometry, not audio measurements"
+  },
+  "limitations": [
+    "Zero/duplicated Mic2 are diagnostic perturbations, not the independently trained ablation.",
+    "GCC-PHAT on a mixture is not the isolated speech/noise propagation delay.",
+    "A high inter-channel correlation alone does not imply no usable spatial cues.",
+    "If this is a test manifest these are retrospective diagnostics, not tuning data."
+  ],
+  "manifest_hashes": [
+    "64088cffb3148e1d299f979ff2fbf8c528aec2f60356ef9239807b4a009641d0",
+    "cad5bc7cf0f78637ebd2ac6fc8718b5fbcedfbae8dfdead3cca0ec3d0393aad2"
+  ],
+  "missing": [
+    {
+      "id": "test_00000",
+      "mixture_available": false,
+      "target_available": true
+    },
+    {
+      "id": "test_00001",
+      "mixture_available": false,
+      "target_available": true
+    },
+    {
+      "id": "test_00002",
+      "mixture_available": false,
+      "target_available": true
+    },
+    {
+      "id": "test_00003",
+      "mixture_available": false,
+      "target_available": true
+    },
+    {
+      "id": "test_00004",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00005",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00006",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00007",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00008",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00009",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00010",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00011",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00012",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00013",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00014",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00015",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00016",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00017",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00018",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00019",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00020",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00021",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00022",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00023",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00024",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00025",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00026",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00027",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00028",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00029",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00030",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00031",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00032",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00033",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00034",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00035",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00036",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00037",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00038",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00039",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00040",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00041",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00042",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00043",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00044",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00045",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00046",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00047",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00048",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00049",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00050",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00051",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00052",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00053",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00054",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00055",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00056",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00057",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00058",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00059",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00060",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00061",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00062",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00063",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00064",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00065",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00066",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00067",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00068",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00069",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00070",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00071",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00072",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00073",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00074",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00075",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00076",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00077",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00078",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00079",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00080",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00081",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00082",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00083",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00084",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00085",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00086",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00087",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00088",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00089",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00090",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00091",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00092",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00093",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00094",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00095",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00096",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00097",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00098",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00099",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00100",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00101",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00102",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00103",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00104",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00105",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00106",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00107",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00108",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00109",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00110",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00111",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00112",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00113",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00114",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00115",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00116",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00117",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00118",
+      "mixture_available": false,
+      "target_available": false
+    },
+    {
+      "id": "test_00119",
+      "mixture_available": false,
+      "target_available": false
+    }
+  ],
+  "requested_cases": 120,
+  "status": "UNVERIFIED",
+  "verified_cases": 0
+}

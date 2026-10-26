@@ -1,6 +1,6 @@
 # IGCRN Dual-Microphone Speech Enhancement
 
-Focused, explainable PyTorch reproduction of [Liu & Zhang (INTERSPEECH 2021)](https://arxiv.org/abs/2107.11968). **No research training/evaluation has been completed. Results and trained checkpoints are pending.**
+Focused, explainable PyTorch reproduction of [Liu & Zhang (INTERSPEECH 2021)](https://arxiv.org/abs/2107.11968). V1 has completed in Colab according to the supplied experiment record; the legacy sections below retain their original pending-publication placeholders. V2 is stage-one implementation/acceptance only; **no full V2 training has been launched**.
 
 Repository: https://github.com/ZhengchenYuan/IGCRN-DualMic-Speech-Enhancement
 
@@ -143,3 +143,9 @@ After a runtime reset, regenerate the same source selection and mixtures and com
 ## Limitations and AI disclosure
 
 This is a focused architectural reproduction with public replacement data and a simplified RIR model, not a verified reproduction of published scores. T4 performance remains to be measured. AI assistance was used to draft implementation, tests, documentation and report; a human should review the math, run experiments and listen to outputs before submission. Pending result fields must be filled only from saved evaluation outputs.
+
+## V2 spatial-simulation experiment (stage one)
+
+Stage-one local suite: **61 tests passed**; actual PRA physical and small-generation acceptance passed. Actual V1 dual-channel audio diagnostics remain UNVERIFIED locally, so full execution remains gated. See [acceptance results](docs/v2/STAGE1_RESULTS.md).
+
+See [the V2 implementation and safety protocol](docs/v2/README.md), [V1 read-only diagnostic](docs/v2/v1_diagnostic.json), and [physical acceptance record](docs/v2/acoustics_acceptance.json). The V1 model/loss and legacy scripts are unchanged. New notebook: [notebooks/v2_colab.ipynb](notebooks/v2_colab.ipynb); its overnight execution switch is false by default. V2 requires all three original V1 manifests to lock source identities; the supplied test manifest alone cannot establish leakage protection. Never repurpose mono exports as synchronized dual-channel source audio. Production execution is gated on real PRA acceptance and V1 dual-channel diagnostic completion.

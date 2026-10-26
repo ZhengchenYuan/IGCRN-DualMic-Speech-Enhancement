@@ -1,0 +1,23 @@
+{
+  "all_rt60_targets": [
+    0.15,
+    0.25,
+    0.35
+  ],
+  "counts_per_generation": {
+    "test": 3,
+    "train": 3,
+    "valid": 3
+  },
+  "identical_audio_and_rir_hashes": true,
+  "independent_generations": 2,
+  "limitations": [
+    "Actual V1 identity registry and real-source generation require all original manifests and source files."
+  ],
+  "max_clean_mic1_target_error": 2.9775450882674193e-08,
+  "max_snr_error_db": 6.052738274104122e-09,
+  "seconds": 0.8915588330710307,
+  "source": "generated Gaussian fixtures, NOT real speech or V1 waveforms",
+  "status": "PASS",
+  "training_started": false
+}

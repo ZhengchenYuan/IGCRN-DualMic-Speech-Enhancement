@@ -1,0 +1,26 @@
+schema_version: 2
+seed: 2026
+counts: {train: 3000, valid: 300, test: 300}
+seconds: 2.0
+sample_rate: 16000
+snrs_db: [-3, 0, 3]
+room: [5.0, 5.0, 3.0]
+mics: [[2.49, 2.5, 1.5], [2.51, 2.5, 1.5]]
+source_radius: 1.5
+source_height: 1.5
+angles_degrees: [-90.0, 90.0]
+rt60_seconds: [0.15, 0.25, 0.35]
+geometry_counts: {train: 300, valid: 60, test: 60}
+backend: pra
+ray_tracing: false
+randomized_ism: false
+max_attempts: 20
+model: {width: 64, depth: 6, n_fft: 512, hop: 256}
+lr: 0.0002
+batch_size: 1
+max_epochs: 11
+budget_minutes: 300
+evaluation_reserve_minutes: 20
+sync_reserve_minutes: 7
+safety_minutes: 15
+initial_pair_estimate_minutes: 20

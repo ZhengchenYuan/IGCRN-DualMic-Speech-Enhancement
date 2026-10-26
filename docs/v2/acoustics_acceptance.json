@@ -1,0 +1,1072 @@
+{
+  "cases": [
+    {
+      "angle": 0,
+      "backend": "legacy",
+      "bands": {
+        "1000": {
+          "ild_db": 0.0,
+          "ipd_error_degrees": 0.0
+        },
+        "4000": {
+          "ild_db": 0.0,
+          "ipd_error_degrees": 0.0
+        },
+        "7000": {
+          "ild_db": 0.0,
+          "ipd_error_degrees": 0.0
+        }
+      },
+      "caveat": "PRA first/full responses include multipath; phase need not follow free-field theory",
+      "metadata": {
+        "backend": "legacy",
+        "global_delay_samples": 0,
+        "max_order": 1,
+        "measured_rt60_seconds": null,
+        "original_lengths": [
+          [
+            4096,
+            4096
+          ],
+          [
+            4096,
+            4096
+          ]
+        ],
+        "scene": {
+          "mics": [
+            [
+              2.49,
+              2.5,
+              1.5
+            ],
+            [
+              2.51,
+              2.5,
+              1.5
+            ]
+          ],
+          "room": [
+            5.0,
+            5.0,
+            3.0
+          ],
+          "rt60": 0.25,
+          "sources": [
+            [
+              2.5,
+              4.0,
+              1.5
+            ],
+            [
+              2.5,
+              4.0,
+              1.5
+            ]
+          ]
+        },
+        "seconds": 0.013627541018649936,
+        "speed_of_sound": 343.0
+      },
+      "phase_slope_tdoa_samples": -5.510736181149318e-19,
+      "tdoa_error_samples": -5.510736181149318e-19,
+      "theory_tdoa_samples": 0.0
+    },
+    {
+      "angle": 22.5,
+      "backend": "legacy",
+      "bands": {
+        "1000": {
+          "ild_db": 0.02012011874225597,
+          "ipd_error_degrees": -0.10795413214705292
+        },
+        "4000": {
+          "ild_db": -0.3949117926382594,
+          "ipd_error_degrees": -7.498041576988699
+        },
+        "7000": {
+          "ild_db": -1.3300300007717614,
+          "ipd_error_degrees": -44.127744683810064
+        }
+      },
+      "caveat": "PRA first/full responses include multipath; phase need not follow free-field theory",
+      "metadata": {
+        "backend": "legacy",
+        "global_delay_samples": 0,
+        "max_order": 1,
+        "measured_rt60_seconds": null,
+        "original_lengths": [
+          [
+            4096,
+            4096
+          ],
+          [
+            4096,
+            4096
+          ]
+        ],
+        "scene": {
+          "mics": [
+            [
+              2.49,
+              2.5,
+              1.5
+            ],
+            [
+              2.51,
+              2.5,
+              1.5
+            ]
+          ],
+          "room": [
+            5.0,
+            5.0,
+            3.0
+          ],
+          "rt60": 0.25,
+          "sources": [
+            [
+              3.0740251485476344,
+              3.88581929876693,
+              1.5
+            ],
+            [
+              2.5,
+              4.0,
+              1.5
+            ]
+          ]
+        },
+        "seconds": 0.00013416691217571497,
+        "speed_of_sound": 343.0
+      },
+      "phase_slope_tdoa_samples": -0.2696049813915858,
+      "tdoa_error_samples": 0.08741069099672738,
+      "theory_tdoa_samples": -0.35701567238831317
+    },
+    {
+      "angle": 45,
+      "backend": "legacy",
+      "bands": {
+        "1000": {
+          "ild_db": 0.06867696863565655,
+          "ipd_error_degrees": -0.08714788811599852
+        },
+        "4000": {
+          "ild_db": -0.21806226304349222,
+          "ipd_error_degrees": -6.859421467966785
+        },
+        "7000": {
+          "ild_db": -2.0770050474403257,
+          "ipd_error_degrees": -64.74283340398756
+        }
+      },
+      "caveat": "PRA first/full responses include multipath; phase need not follow free-field theory",
+      "metadata": {
+        "backend": "legacy",
+        "global_delay_samples": 0,
+        "max_order": 1,
+        "measured_rt60_seconds": null,
+        "original_lengths": [
+          [
+            4096,
+            4096
+          ],
+          [
+            4096,
+            4096
+          ]
+        ],
+        "scene": {
+          "mics": [
+            [
+              2.49,
+              2.5,
+              1.5
+            ],
+            [
+              2.51,
+              2.5,
+              1.5
+            ]
+          ],
+          "room": [
+            5.0,
+            5.0,
+            3.0
+          ],
+          "rt60": 0.25,
+          "sources": [
+            [
+              3.560660171779821,
+              3.5606601717798214,
+              1.5
+            ],
+            [
+              2.5,
+              4.0,
+              1.5
+            ]
+          ]
+        },
+        "seconds": 0.00014991709031164646,
+        "speed_of_sound": 343.0
+      },
+      "phase_slope_tdoa_samples": -0.5818069425885263,
+      "tdoa_error_samples": 0.07787718513241504,
+      "theory_tdoa_samples": -0.6596841277209413
+    },
+    {
+      "angle": 90,
+      "backend": "legacy",
+      "bands": {
+        "1000": {
+          "ild_db": 0.1131269850089916,
+          "ipd_error_degrees": -0.019396574397691498
+        },
+        "4000": {
+          "ild_db": 0.04842182859885227,
+          "ipd_error_degrees": -1.6117056414694588
+        },
+        "7000": {
+          "ild_db": -1.3284285601908163,
+          "ipd_error_degrees": -24.17766318577838
+        }
+      },
+      "caveat": "PRA first/full responses include multipath; phase need not follow free-field theory",
+      "metadata": {
+        "backend": "legacy",
+        "global_delay_samples": 0,
+        "max_order": 1,
+        "measured_rt60_seconds": null,
+        "original_lengths": [
+          [
+            4096,
+            4096
+          ],
+          [
+            4096,
+            4096
+          ]
+        ],
+        "scene": {
+          "mics": [
+            [
+              2.49,
+              2.5,
+              1.5
+            ],
+            [
+              2.51,
+              2.5,
+              1.5
+            ]
+          ],
+          "room": [
+            5.0,
+            5.0,
+            3.0
+          ],
+          "rt60": 0.25,
+          "sources": [
+            [
+              4.0,
+              2.5,
+              1.5
+            ],
+            [
+              2.5,
+              4.0,
+              1.5
+            ]
+          ]
+        },
+        "seconds": 0.00014570809435099363,
+        "speed_of_sound": 343.0
+      },
+      "phase_slope_tdoa_samples": -0.9148737730371828,
+      "tdoa_error_samples": 0.018070833376791495,
+      "theory_tdoa_samples": -0.9329446064139743
+    },
+    {
+      "angle": 0,
+      "backend": "pra_direct",
+      "bands": {
+        "1000": {
+          "ild_db": 0.0,
+          "ipd_error_degrees": 0.0
+        },
+        "4000": {
+          "ild_db": 0.0,
+          "ipd_error_degrees": 0.0
+        },
+        "7000": {
+          "ild_db": 0.0,
+          "ipd_error_degrees": 0.0
+        }
+      },
+      "caveat": "PRA first/full responses include multipath; phase need not follow free-field theory",
+      "metadata": {
+        "backend": "pra_direct",
+        "energy_absorption": 1.0,
+        "global_delay_samples": 40,
+        "max_order": 0,
+        "measured_rt60_seconds": null,
+        "original_lengths": [
+          [
+            152,
+            152
+          ],
+          [
+            152,
+            152
+          ]
+        ],
+        "pra_version": "0.10.0",
+        "scene": {
+          "mics": [
+            [
+              2.49,
+              2.5,
+              1.5
+            ],
+            [
+              2.51,
+              2.5,
+              1.5
+            ]
+          ],
+          "room": [
+            5.0,
+            5.0,
+            3.0
+          ],
+          "rt60": 0.25,
+          "sources": [
+            [
+              2.5,
+              4.0,
+              1.5
+            ],
+            [
+              2.5,
+              4.0,
+              1.5
+            ]
+          ]
+        },
+        "seconds": 0.00205258303321898,
+        "speed_of_sound": 343.0
+      },
+      "phase_slope_tdoa_samples": -1.260477967970068e-19,
+      "tdoa_error_samples": -1.260477967970068e-19,
+      "theory_tdoa_samples": 0.0
+    },
+    {
+      "angle": 22.5,
+      "backend": "pra_direct",
+      "bands": {
+        "1000": {
+          "ild_db": 0.038218452587327575,
+          "ipd_error_degrees": -0.038920337376798994
+        },
+        "4000": {
+          "ild_db": 0.03130822927055503,
+          "ipd_error_degrees": -0.024988185838107146
+        },
+        "7000": {
+          "ild_db": 0.0246664730040254,
+          "ipd_error_degrees": 0.0026882710738718105
+        }
+      },
+      "caveat": "PRA first/full responses include multipath; phase need not follow free-field theory",
+      "metadata": {
+        "backend": "pra_direct",
+        "energy_absorption": 1.0,
+        "global_delay_samples": 40,
+        "max_order": 0,
+        "measured_rt60_seconds": null,
+        "original_lengths": [
+          [
+            153,
+            152
+          ],
+          [
+            152,
+            152
+          ]
+        ],
+        "pra_version": "0.10.0",
+        "scene": {
+          "mics": [
+            [
+              2.49,
+              2.5,
+              1.5
+            ],
+            [
+              2.51,
+              2.5,
+              1.5
+            ]
+          ],
+          "room": [
+            5.0,
+            5.0,
+            3.0
+          ],
+          "rt60": 0.25,
+          "sources": [
+            [
+              3.0740251485476344,
+              3.88581929876693,
+              1.5
+            ],
+            [
+              2.5,
+              4.0,
+              1.5
+            ]
+          ]
+        },
+        "seconds": 0.0016028339741751552,
+        "speed_of_sound": 343.0
+      },
+      "phase_slope_tdoa_samples": -0.3570952310297299,
+      "tdoa_error_samples": -7.955864141673263e-05,
+      "theory_tdoa_samples": -0.35701567238831317
+    },
+    {
+      "angle": 45,
+      "backend": "pra_direct",
+      "bands": {
+        "1000": {
+          "ild_db": 0.08326863922526823,
+          "ipd_error_degrees": -0.045340913180593016
+        },
+        "4000": {
+          "ild_db": 0.07006151396532147,
+          "ipd_error_degrees": -0.03890872372607579
+        },
+        "7000": {
+          "ild_db": 0.06365511192299879,
+          "ipd_error_degrees": 0.0257458404149021
+        }
+      },
+      "caveat": "PRA first/full responses include multipath; phase need not follow free-field theory",
+      "metadata": {
+        "backend": "pra_direct",
+        "energy_absorption": 1.0,
+        "global_delay_samples": 40,
+        "max_order": 0,
+        "measured_rt60_seconds": null,
+        "original_lengths": [
+          [
+            153,
+            152
+          ],
+          [
+            152,
+            152
+          ]
+        ],
+        "pra_version": "0.10.0",
+        "scene": {
+          "mics": [
+            [
+              2.49,
+              2.5,
+              1.5
+            ],
+            [
+              2.51,
+              2.5,
+              1.5
+            ]
+          ],
+          "room": [
+            5.0,
+            5.0,
+            3.0
+          ],
+          "rt60": 0.25,
+          "sources": [
+            [
+              3.560660171779821,
+              3.5606601717798214,
+              1.5
+            ],
+            [
+              2.5,
+              4.0,
+              1.5
+            ]
+          ]
+        },
+        "seconds": 0.001528250053524971,
+        "speed_of_sound": 343.0
+      },
+      "phase_slope_tdoa_samples": -0.6597710449167334,
+      "tdoa_error_samples": -8.691719579212442e-05,
+      "theory_tdoa_samples": -0.6596841277209413
+    },
+    {
+      "angle": 90,
+      "backend": "pra_direct",
+      "bands": {
+        "1000": {
+          "ild_db": 0.12385757202714955,
+          "ipd_error_degrees": -0.04376580677160888
+        },
+        "4000": {
+          "ild_db": 0.1102516200146937,
+          "ipd_error_degrees": -0.048098263668588964
+        },
+        "7000": {
+          "ild_db": 0.11840184885962596,
+          "ipd_error_degrees": 0.06241247426387388
+        }
+      },
+      "caveat": "PRA first/full responses include multipath; phase need not follow free-field theory",
+      "metadata": {
+        "backend": "pra_direct",
+        "energy_absorption": 1.0,
+        "global_delay_samples": 40,
+        "max_order": 0,
+        "measured_rt60_seconds": null,
+        "original_lengths": [
+          [
+            153,
+            152
+          ],
+          [
+            152,
+            152
+          ]
+        ],
+        "pra_version": "0.10.0",
+        "scene": {
+          "mics": [
+            [
+              2.49,
+              2.5,
+              1.5
+            ],
+            [
+              2.51,
+              2.5,
+              1.5
+            ]
+          ],
+          "room": [
+            5.0,
+            5.0,
+            3.0
+          ],
+          "rt60": 0.25,
+          "sources": [
+            [
+              4.0,
+              2.5,
+              1.5
+            ],
+            [
+              2.5,
+              4.0,
+              1.5
+            ]
+          ]
+        },
+        "seconds": 0.001482292078435421,
+        "speed_of_sound": 343.0
+      },
+      "phase_slope_tdoa_samples": -0.9330224976782064,
+      "tdoa_error_samples": -7.789126423218828e-05,
+      "theory_tdoa_samples": -0.9329446064139743
+    },
+    {
+      "angle": 0,
+      "backend": "pra_first",
+      "bands": {
+        "1000": {
+          "ild_db": -8.003917972392321e-14,
+          "ipd_error_degrees": -1.9705607831520877e-10
+        },
+        "4000": {
+          "ild_db": 5.88046889102204e-11,
+          "ipd_error_degrees": -4.514837475408675e-10
+        },
+        "7000": {
+          "ild_db": -1.0125438398815418e-11,
+          "ipd_error_degrees": -5.295655643217951e-11
+        }
+      },
+      "caveat": "PRA first/full responses include multipath; phase need not follow free-field theory",
+      "metadata": {
+        "backend": "pra_first",
+        "energy_absorption": 0.5774999999999999,
+        "global_delay_samples": 40,
+        "max_order": 1,
+        "measured_rt60_seconds": null,
+        "original_lengths": [
+          [
+            386,
+            386
+          ],
+          [
+            386,
+            386
+          ]
+        ],
+        "pra_version": "0.10.0",
+        "scene": {
+          "mics": [
+            [
+              2.49,
+              2.5,
+              1.5
+            ],
+            [
+              2.51,
+              2.5,
+              1.5
+            ]
+          ],
+          "room": [
+            5.0,
+            5.0,
+            3.0
+          ],
+          "rt60": 0.25,
+          "sources": [
+            [
+              2.5,
+              4.0,
+              1.5
+            ],
+            [
+              2.5,
+              4.0,
+              1.5
+            ]
+          ]
+        },
+        "seconds": 0.0015532500110566616,
+        "speed_of_sound": 343.0
+      },
+      "phase_slope_tdoa_samples": -5.477091534502934e-14,
+      "tdoa_error_samples": -5.477091534502934e-14,
+      "theory_tdoa_samples": 0.0
+    },
+    {
+      "angle": 22.5,
+      "backend": "pra_first",
+      "bands": {
+        "1000": {
+          "ild_db": -1.2418787163617746,
+          "ipd_error_degrees": -1.3855289474408052
+        },
+        "4000": {
+          "ild_db": -1.1928802089060224,
+          "ipd_error_degrees": 34.971964114608234
+        },
+        "7000": {
+          "ild_db": 1.938827015563729,
+          "ipd_error_degrees": 6.373884833197442
+        }
+      },
+      "caveat": "PRA first/full responses include multipath; phase need not follow free-field theory",
+      "metadata": {
+        "backend": "pra_first",
+        "energy_absorption": 0.5774999999999999,
+        "global_delay_samples": 40,
+        "max_order": 1,
+        "measured_rt60_seconds": null,
+        "original_lengths": [
+          [
+            382,
+            386
+          ],
+          [
+            382,
+            386
+          ]
+        ],
+        "pra_version": "0.10.0",
+        "scene": {
+          "mics": [
+            [
+              2.49,
+              2.5,
+              1.5
+            ],
+            [
+              2.51,
+              2.5,
+              1.5
+            ]
+          ],
+          "room": [
+            5.0,
+            5.0,
+            3.0
+          ],
+          "rt60": 0.25,
+          "sources": [
+            [
+              3.0740251485476344,
+              3.88581929876693,
+              1.5
+            ],
+            [
+              2.5,
+              4.0,
+              1.5
+            ]
+          ]
+        },
+        "seconds": 0.0015525419730693102,
+        "speed_of_sound": 343.0
+      },
+      "phase_slope_tdoa_samples": 4.286671765769212,
+      "tdoa_error_samples": 4.643687438157525,
+      "theory_tdoa_samples": -0.35701567238831317
+    },
+    {
+      "angle": 45,
+      "backend": "pra_first",
+      "bands": {
+        "1000": {
+          "ild_db": -3.382089990245743,
+          "ipd_error_degrees": -36.07143145471863
+        },
+        "4000": {
+          "ild_db": -1.9682229035639478,
+          "ipd_error_degrees": 11.428891168128706
+        },
+        "7000": {
+          "ild_db": 0.8959082538058014,
+          "ipd_error_degrees": -40.366112750219116
+        }
+      },
+      "caveat": "PRA first/full responses include multipath; phase need not follow free-field theory",
+      "metadata": {
+        "backend": "pra_first",
+        "energy_absorption": 0.5774999999999999,
+        "global_delay_samples": 40,
+        "max_order": 1,
+        "measured_rt60_seconds": null,
+        "original_lengths": [
+          [
+            370,
+            386
+          ],
+          [
+            370,
+            386
+          ]
+        ],
+        "pra_version": "0.10.0",
+        "scene": {
+          "mics": [
+            [
+              2.49,
+              2.5,
+              1.5
+            ],
+            [
+              2.51,
+              2.5,
+              1.5
+            ]
+          ],
+          "room": [
+            5.0,
+            5.0,
+            3.0
+          ],
+          "rt60": 0.25,
+          "sources": [
+            [
+              3.560660171779821,
+              3.5606601717798214,
+              1.5
+            ],
+            [
+              2.5,
+              4.0,
+              1.5
+            ]
+          ]
+        },
+        "seconds": 0.0014737920137122273,
+        "speed_of_sound": 343.0
+      },
+      "phase_slope_tdoa_samples": -2.7856164712908584,
+      "tdoa_error_samples": -2.125932343569917,
+      "theory_tdoa_samples": -0.6596841277209413
+    },
+    {
+      "angle": 90,
+      "backend": "pra_first",
+      "bands": {
+        "1000": {
+          "ild_db": 1.3490595110455572,
+          "ipd_error_degrees": 6.905188718284945
+        },
+        "4000": {
+          "ild_db": -6.1186636079428505,
+          "ipd_error_degrees": 112.55318876080753
+        },
+        "7000": {
+          "ild_db": 1.2699821244288367,
+          "ipd_error_degrees": -46.051328206823335
+        }
+      },
+      "caveat": "PRA first/full responses include multipath; phase need not follow free-field theory",
+      "metadata": {
+        "backend": "pra_first",
+        "energy_absorption": 0.5774999999999999,
+        "global_delay_samples": 40,
+        "max_order": 1,
+        "measured_rt60_seconds": null,
+        "original_lengths": [
+          [
+            385,
+            386
+          ],
+          [
+            386,
+            386
+          ]
+        ],
+        "pra_version": "0.10.0",
+        "scene": {
+          "mics": [
+            [
+              2.49,
+              2.5,
+              1.5
+            ],
+            [
+              2.51,
+              2.5,
+              1.5
+            ]
+          ],
+          "room": [
+            5.0,
+            5.0,
+            3.0
+          ],
+          "rt60": 0.25,
+          "sources": [
+            [
+              4.0,
+              2.5,
+              1.5
+            ],
+            [
+              2.5,
+              4.0,
+              1.5
+            ]
+          ]
+        },
+        "seconds": 0.001560624921694398,
+        "speed_of_sound": 343.0
+      },
+      "phase_slope_tdoa_samples": -0.9386731269049793,
+      "tdoa_error_samples": -0.005728520491005029,
+      "theory_tdoa_samples": -0.9329446064139743
+    }
+  ],
+  "direct_4khz_ipd_tolerance_degrees": 3,
+  "direct_tdoa_tolerance_samples": 0.05,
+  "full_rt60_probes": [
+    {
+      "backend": "pra",
+      "energy_absorption": 0.7323355715857023,
+      "global_delay_samples": 40,
+      "max_order": 20,
+      "measured_rt60_seconds": [
+        [
+          0.1306841659092873,
+          0.13087889001667935
+        ],
+        [
+          0.13087889003494194,
+          0.13068416581295608
+        ]
+      ],
+      "original_lengths": [
+        [
+          4808,
+          4808
+        ],
+        [
+          4808,
+          4808
+        ]
+      ],
+      "pra_version": "0.10.0",
+      "scene": {
+        "mics": [
+          [
+            2.49,
+            2.5,
+            1.5
+          ],
+          [
+            2.51,
+            2.5,
+            1.5
+          ]
+        ],
+        "room": [
+          5.0,
+          5.0,
+          3.0
+        ],
+        "rt60": 0.15,
+        "sources": [
+          [
+            3.25,
+            3.799038105676658,
+            1.5
+          ],
+          [
+            1.75,
+            3.799038105676658,
+            1.5
+          ]
+        ]
+      },
+      "seconds": 0.009132915991358459,
+      "speed_of_sound": 343.0
+    },
+    {
+      "backend": "pra",
+      "energy_absorption": 0.4394013429514214,
+      "global_delay_samples": 40,
+      "max_order": 33,
+      "measured_rt60_seconds": [
+        [
+          0.25397190410342174,
+          0.25453417260583955
+        ],
+        [
+          0.25453417226103875,
+          0.2539719045906979
+        ]
+      ],
+      "original_lengths": [
+        [
+          7840,
+          7840
+        ],
+        [
+          7840,
+          7840
+        ]
+      ],
+      "pra_version": "0.10.0",
+      "scene": {
+        "mics": [
+          [
+            2.49,
+            2.5,
+            1.5
+          ],
+          [
+            2.51,
+            2.5,
+            1.5
+          ]
+        ],
+        "room": [
+          5.0,
+          5.0,
+          3.0
+        ],
+        "rt60": 0.25,
+        "sources": [
+          [
+            3.25,
+            3.799038105676658,
+            1.5
+          ],
+          [
+            1.75,
+            3.799038105676658,
+            1.5
+          ]
+        ]
+      },
+      "seconds": 0.031141874962486327,
+      "speed_of_sound": 343.0
+    },
+    {
+      "backend": "pra",
+      "energy_absorption": 0.3138581021081581,
+      "global_delay_samples": 40,
+      "max_order": 46,
+      "measured_rt60_seconds": [
+        [
+          0.38697941143848386,
+          0.3853967055665764
+        ],
+        [
+          0.3853967052025517,
+          0.3869794114534765
+        ]
+      ],
+      "original_lengths": [
+        [
+          10872,
+          10872
+        ],
+        [
+          10872,
+          10872
+        ]
+      ],
+      "pra_version": "0.10.0",
+      "scene": {
+        "mics": [
+          [
+            2.49,
+            2.5,
+            1.5
+          ],
+          [
+            2.51,
+            2.5,
+            1.5
+          ]
+        ],
+        "room": [
+          5.0,
+          5.0,
+          3.0
+        ],
+        "rt60": 0.35,
+        "sources": [
+          [
+            3.25,
+            3.799038105676658,
+            1.5
+          ],
+          [
+            1.75,
+            3.799038105676658,
+            1.5
+          ]
+        ]
+      },
+      "seconds": 0.07725987490266562,
+      "speed_of_sound": 343.0
+    }
+  ],
+  "status": "PASS"
+}
