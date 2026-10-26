@@ -1,0 +1,26 @@
+[
+  {
+    "path": "examples/01_dry_chirp.wav",
+    "sha256": "f500dc98f47aa63c83698fb87e9fb772418fba1ddb65a7a49f8549d8a5db4aef",
+    "seed": 2026,
+    "description": "Synthetic diagnostic; not speech or enhancement result"
+  },
+  {
+    "path": "examples/02_reverberant_target_mic1.wav",
+    "sha256": "934a4eb11f22fe15f4742d4210235e702bf05d6faf0816ba19b4b434bb843d32",
+    "seed": 2026,
+    "description": "Synthetic diagnostic; not speech or enhancement result"
+  },
+  {
+    "path": "examples/03_synchronized_dual_mixture.wav",
+    "sha256": "820c985832dd1458166e6a3da19613b36e9d2a6fafeda88953f028e616dddc17",
+    "seed": 2026,
+    "description": "Synthetic diagnostic; not speech or enhancement result"
+  },
+  {
+    "path": "examples/04_duplicated_mic1_mixture.wav",
+    "sha256": "de4d9bad0b3f5fccca3833e55a9ede4d4242e1b4ae6e730fca9085c5026bb2fd",
+    "seed": 2026,
+    "description": "Synthetic diagnostic; not speech or enhancement result"
+  }
+]

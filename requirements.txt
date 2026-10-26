@@ -1,0 +1,9 @@
+torch==2.8.0
+numpy==2.2.6
+scipy==1.15.3
+soundfile==0.13.1
+pystoi==0.4.1
+PyYAML==6.0.2
+pytest==8.4.2
+pypdf==6.1.1
+PyMuPDF==1.26.5

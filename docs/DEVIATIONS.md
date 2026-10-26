@@ -1,0 +1,14 @@
+# Fidelity and explicit deviations
+Reference: Liu & Zhang, INTERSPEECH 2021, https://arxiv.org/abs/2107.11968 (sections 2.1–3.1, equations 2–7).
+
+- Six stride-one 5×1 frequency kernels, 64 channels; GLU → batch normalization → ELU; two-layer temporal Bi-LSTM with 64 hidden units per direction shared across every frequency; 128→64 projection; separate six-stage transpose-gated decoders with encoder skip concatenation. This is offline, not causal.
+- Four real/imaginary input channels follow the text. Table 1's first row says two channels, contradicting the text. We implement four.
+- 512 FFT, 256 hop, square-root periodic Hann, centered constant padding. Retain all 257 one-sided bins including DC/Nyquist; the paper says 256 and does not specify discarded bin handling. Decoder frequency-linear heads therefore use 257 units.
+- Final gated decoder layers omit BN/ELU. Mask uses sigmoid and mapping uses softplus, ensuring nonnegative amplitude. The paper does not specify these head activations. Two phase outputs are normalized with an epsilon guard and unit-real fallback. Amplitude is mask × Mic1 magnitude + mapping. No noisy-phase residual.
+- Loss implements magnitude cube-root MSE plus real and imaginary cube-root complex MSE; averages over batch, frequency, time. Epsilon stabilizes silent bins.
+- Public LibriSpeech/MUSAN substitute for AISHELL-1/TIMIT/NOISEX92. Targets retain the full simulated Mic1 room response (no dereverberation).
+- RIR is a deliberately limited first-order image-source implementation: direct path + six wall reflections, fixed 0.65 pressure reflection coefficient, 343 m/s, linear fractional-delay interpolation. No RT60 matching, scattering, microphone response, or higher-order reverberation. Store actual RIR arrays. This is not a full IMAGE-method reproduction.
+- Room 5×5×3 m, 2 cm array, 1.5 m source radius; training grid follows the paper. Test uses interleaved angles absent from training (paper's quoted test grid overlaps training). Noise/speech positions differ. SNR is whole-crop energy at Mic1 after convolution, shared scaling at Mic2; common gain avoids clipping. Convolution tails are cropped to fixed length identically for mixture and target, without onset alignment.
+- Small experiment: 2 s crops, batch 1, 30 epochs, Adam 2e-4, gradient clipping 5. No AMP (numerical simplicity); tune batch size to fit T4 and use identical budgets in both arms. Paper used batch 4 and does not report all training details.
+- SI-SDRi replaces paper SDR; STOI is standard, not extended. No PESQ or paper-score comparisons. Fixed cropped-utterance macro means, grouped by SNR. Test once after selecting checkpoints by validation loss. For strictly equal budget use last checkpoints from equal epochs.
+- Smoke configuration reduces width/depth solely for debugging; never label its results full IGCRN. Synthetic audio is diagnostic only. Neither full training nor T4 runtime/VRAM has been measured here.
