@@ -37,3 +37,32 @@ Full local suite: **61 passed**, including actual PRA tests (no skipped PRA acce
 Local test environment: Python 3.10, PyTorch 2.3.1, NumPy 1.26.4, SciPy 1.13.1, SoundFile 0.13.1, pyroomacoustics 0.10.0. This differs from pinned Colab-oriented requirements. Colab/T4 throughput, resident-model VRAM, mounted-Drive transfer semantics and a full 3000/300/300 real-source run are **not locally verified**.
 
 Production execution additionally requires physical acceptance PASS, actual V1 dual-channel diagnostic VERIFIED, all three original V1 manifests bound to the frozen checkpoint, restored legal source files, a production dataset integrity check, and explicit `RUN_OVERNIGHT=True` / `--execute`. A fixture or missing-audio report cannot satisfy those gates. Stop here until the user approves the next stage.
+
+## Continuation check — 2026-10-27
+
+The worktree was clean at `098821a`; the completed stage-one files and prior
+acceptance evidence were preserved. The PRA timeout was already resolved by the
+verified offline wheel installation recorded above. No installation permission
+requests or package downloads were repeated during this continuation.
+
+Added `scripts/check_v2_ready.py` and a strict invocation in the V2 notebook.
+The preflight only reads configuration, acceptance evidence, V1 checkpoint and
+original manifest bindings, locked source roles/hashes, an optional existing V2
+dataset, and an optional persisted deadline. Missing prerequisites are
+UNVERIFIED; mismatches/corruption fail. It cannot reset budgets, create data or
+start training. T4 checking is explicit; input-only checks do not claim hardware
+acceptance. The notebook's overnight switch remains false by default.
+
+Full local suite rechecked: **69 passed, no skips**. Eight new tests cover
+read-only success, absent PRA, absent original manifest, source corruption,
+checkpoint mismatch, reassigned protected V1 identities, unavailable dual-channel diagnostics and expired budgets.
+Real PRA acoustic tests reused the already-installed 0.10.0 environment.
+Notebook code cells compile. No full V2 dataset or production training was run.
+
+An actual preflight with the available local checkpoint and physical PASS record
+returned BLOCKED: the production registry/all original manifests are unavailable,
+and the V1 audio diagnostic remains UNVERIFIED. These are Colab-input gates, not
+PRA installation failures. Restore V1 validation dual-channel WAVs and targets,
+all three original manifests and registered legal raw sources in Colab, rerun the
+V1 diagnostic/registry/small-data acceptance, then run the read-only preflight.
+Do not change RUN_OVERNIGHT until the user separately approves the full run.

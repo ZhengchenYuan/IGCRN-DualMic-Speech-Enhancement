@@ -52,3 +52,28 @@ Evaluation uses the same CPU metric definitions as V1, all 300 cases / 900 metho
 Using the reported V1 55 minutes per 30 epochs, a V2 epoch is roughly 9 minutes per arm, not a guarantee. Target 11 pairs takes about 198 minutes. A planning envelope is diagnostics 15, environment/data 40, initial calibration overhead 5, training 198, evaluation 20, final synchronization 7 and safety 15 = 300 minutes. Preparation or slower pairs reduce the common budget. CPU ISM cost must first be measured; no artificial RT60/order downgrade is used to fit time. Data-generation preparation does not use GPU, though Colab may count the allocated GPU session.
 
 Keep the 6-epoch pair (18,000 updates/arm) as an equal-update reference to V1 and the final pair (at most 33,000 updates/arm). More examples plus improved simulation are a combined recipe: V2 scores alone cannot establish which individual change caused improvement. No pass condition requires Dual to win. V1 assets, original manifest bytes and original checkpoint/evaluation hashes remain authoritative. The supplied V1 assets do not contain a verifiable training code commit or the three complete training/validation/source manifests; do not invent that linkage.
+
+## Read-only Colab readiness check
+
+The continuation adds a preflight that never installs dependencies, writes files,
+creates data, or starts training. Missing PRA or missing V1 evidence is
+`UNVERIFIED`; corrupted/mismatched evidence is a failure. The original local PRA
+acceptance remains valid; do not repeat installation permission requests just
+because earlier attempts timed out.
+
+After restoring the actual V1 paths and running stage-one cells:
+```bash
+PYTHONDONTWRITEBYTECODE=1 python -B -m scripts.check_v2_ready \
+  --registry /content/igcrn_v2_registry.json \
+  --physical /content/igcrn_v2_stage1/acoustics/acoustics.json \
+  --diagnostic /content/igcrn_v2_stage1/v1/diagnostic.json \
+  --v1-dual /content/drive/MyDrive/IGCRN_NIO/dual/last.pt \
+  --data /content/igcrn_v2_3000
+```
+Exit 2 / `BLOCKED` means restore or regenerate the identified acceptance evidence,
+not bypass it. A nonexistent V2 dataset is reported `WILL_GENERATE`, never as an
+already verified dataset. A reused dataset must match its production counts,
+manifest hashes, config and registry. To check an intended GPU runtime and a
+persisted deadline, append `--require-t4 --run <the V2 run directory>`. This still
+does not start training or reset the timer. The notebook invokes this strict
+check before the opt-in production controller; readiness is not user approval.

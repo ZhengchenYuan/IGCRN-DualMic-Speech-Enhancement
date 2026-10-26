@@ -146,6 +146,6 @@ This is a focused architectural reproduction with public replacement data and a 
 
 ## V2 spatial-simulation experiment (stage one)
 
-Stage-one local suite: **61 tests passed**; actual PRA physical and small-generation acceptance passed. Actual V1 dual-channel audio diagnostics remain UNVERIFIED locally, so full execution remains gated. See [acceptance results](docs/v2/STAGE1_RESULTS.md).
+Stage-one local suite: **69 tests passed**; actual PRA physical and small-generation acceptance passed. Actual V1 dual-channel audio diagnostics remain UNVERIFIED locally, so full execution remains gated. See [acceptance results](docs/v2/STAGE1_RESULTS.md).
 
 See [the V2 implementation and safety protocol](docs/v2/README.md), [V1 read-only diagnostic](docs/v2/v1_diagnostic.json), and [physical acceptance record](docs/v2/acoustics_acceptance.json). The V1 model/loss and legacy scripts are unchanged. New notebook: [notebooks/v2_colab.ipynb](notebooks/v2_colab.ipynb); its overnight execution switch is false by default. V2 requires all three original V1 manifests to lock source identities; the supplied test manifest alone cannot establish leakage protection. Never repurpose mono exports as synchronized dual-channel source audio. Production execution is gated on real PRA acceptance and V1 dual-channel diagnostic completion.
