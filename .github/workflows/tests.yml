@@ -10,6 +10,6 @@ jobs:
           python-version: '3.11'
       - run: pip install -r requirements.txt
       - run: pip install -e .
-      - run: pytest -q
+      - run: python -m pytest -q
       - run: python -m scripts.overfit
       - run: python -m scripts.make_report
