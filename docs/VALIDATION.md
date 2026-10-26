@@ -23,3 +23,11 @@ Full local CPU suite: **27 tests passed**.
 - The 332 MB speech archive transfer was stopped because this environment's download was unusually slow. A complete live public-corpus preparation/simulation was not claimed; fixture-backed extraction and simulator integration passed. Colab/T4 execution remains unverified.
 - Notebook code cells compile, invoke subprocesses from the repository root, use `python -m pytest`, keep audio under `/content/`, save important artifacts under `/content/drive/MyDrive/IGCRN_NIO/`, and disable full training by default.
 - The Chinese report's source description was updated, regenerated and visually checked; it remains exactly one A4 page. No full training or experimental score generation was launched.
+
+## Silent-source retry fix (2026-10-26)
+
+- Full local CPU suite: **38 tests passed**. No full training was launched.
+- Actual silent and near-silent speech/noise fixture recordings recover through deterministic split-local selection. Accepted rows preserve hashes, source identities, offsets, SNR and retry counts across repeated runs.
+- Exhaustion is bounded to 20 total attempts; errors identify both early and late split/sample failures. The twentieth attempt can succeed with `retry_count=19`.
+- A 600-training-sample synthetic simulation generated all 600/120/120 rows and waveform/RIR artifacts with the original repeating SNR schedule. This is a simulator check, not a research experiment.
+- Ordinary I/O failures and keyboard interruption after a completed training split publish no partial dataset or manifests. Full output is atomically published only after all splits succeed, and existing non-empty output directories are preserved.

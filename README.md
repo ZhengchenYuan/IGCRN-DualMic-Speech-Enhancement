@@ -49,6 +49,10 @@ Source IDs, authors/attribution, literal upstream original-license labels, datas
 
 If a required license statement, per-clip attribution or checksum cannot be verified, preparation exits with an error and does not publish a new catalog. Stop and confirm the identified publisher terms manually; do not fill in guessed licenses. Cached files are rehashed, partial downloads are not accepted, and selected speech paths are checked before extraction.
 
+Silent or near-silent source crops are retried using the same seeded RNG and that split's source pools, with **20 total attempts per sample**. Both reverberant Mic1 speech/noise energies must remain finite and at least `1e-12`; no artificial noise is substituted. Each accepted manifest row records `retry_count` (0 on first-attempt success, at most 19). Failed attempts do not consume sample indices or SNR slots: `--count 600` still produces 600/120/120 entries with the repeating −3/0/+3 dB schedule. Exhaustion identifies the split, zero-based sample index, attempts and last source energies/paths.
+
+Simulation publishes the entire dataset only after all three splits succeed, using a hidden sibling staging directory and one atomic directory rename. **Use a new or empty output directory**; existing non-empty outputs are refused to protect frozen data. For example, after an earlier interrupted attempt, use `--output /content/igcrn_data_experiment/mixtures_600` rather than reusing its partial directory. Errors and normal interrupts clean staging files; a force-killed process may leave an explicitly named `.incomplete-*` sibling, never published manifests at the requested output path. Remove such leftovers only after confirming the generating process has stopped. Keep old datasets/manifests for existing checkpoints: the new retry metadata changes manifest hashes, and rejected attempts alter later RNG draws when silence is encountered.
+
 Fixed hashes and seed reproduce selection independently of directory ordering. Frozen WAVs, RIR arrays and simulator manifests capture exact mixtures. Noise scaling uses reverberant Mic1 energy; target is clean reverberant Mic1. No target time shifting or dereverberation. Retain attribution if redistributing real speech/noise examples. The legacy `scripts.catalog` remains available for manually supplied full corpora but is not used by the default pipeline.
 
 ## Fair independent ablation
@@ -132,7 +136,7 @@ After a runtime reset, regenerate the same source selection and mixtures and com
 
 ## Validation
 
-Twenty-seven local CPU tests and the original tiny overfit diagnostic passed. Preparation tests use explicit synthetic fixtures; four real selected noise downloads were also checked. The full public speech-archive preparation was not completed locally because of slow transfer. The full model has 1,342,540 parameters. See [validation record and tested environment](docs/VALIDATION.md); the pinned environment and T4 runtime remain unverified.
+Thirty-eight local CPU tests and the original tiny overfit diagnostic passed. Preparation tests use explicit synthetic fixtures; four real selected noise downloads were also checked. The full public speech-archive preparation was not completed locally because of slow transfer. The full model has 1,342,540 parameters. See [validation record and tested environment](docs/VALIDATION.md); the pinned environment and T4 runtime remain unverified.
 
 ## Limitations and AI disclosure
 
