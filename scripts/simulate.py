@@ -6,6 +6,7 @@ from pathlib import Path
 import numpy as np
 import soundfile as sf
 from scipy.signal import fftconvolve, resample_poly
+from scipy.io import wavfile
 from math import gcd
 from igcrn.data import rows, sha256
 
@@ -108,7 +109,11 @@ def _simulate_splits(args, catalog, out, staging):
             scale = np.sqrt(np.mean(c[:,0]**2)/np.mean(v[:,0]**2)/10**(snr/10))
             x = c+v*scale; gain = .95/max(np.max(np.abs(x)), np.max(np.abs(c)), 1e-8)
             uid = f'{split}_{i:05d}'; mix = out/f'{uid}_mix.wav'; target = out/f'{uid}_target.wav'
-            sf.write(staging/mix.name, x*gain,16000,subtype='FLOAT'); sf.write(staging/target.name,c[:,0]*gain,16000,subtype='FLOAT')
+            # libsndfile FLOAT WAVs include a wall-clock timestamp in PEAK.
+            # SciPy writes IEEE float32 WAVs without that optional chunk; keep
+            # the same sample precision and hash the entire deterministic file.
+            wavfile.write(staging/mix.name, 16000, (x*gain).astype(np.float32))
+            wavfile.write(staging/target.name, 16000, (c[:,0]*gain).astype(np.float32))
             np.savez(staging/f'{uid}_rir.npz', speech=hs, noise=hn)
             manifest.append(dict(id=uid,split=split,mixture=str(mix),target=str(target),
                 mixture_sha256=sha256(staging/mix.name),target_sha256=sha256(staging/target.name),snr_db=snr,

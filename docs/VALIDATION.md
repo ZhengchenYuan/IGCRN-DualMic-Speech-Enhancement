@@ -31,3 +31,10 @@ Full local CPU suite: **27 tests passed**.
 - Exhaustion is bounded to 20 total attempts; errors identify both early and late split/sample failures. The twentieth attempt can succeed with `retry_count=19`.
 - A 600-training-sample synthetic simulation generated all 600/120/120 rows and waveform/RIR artifacts with the original repeating SNR schedule. This is a simulator check, not a research experiment.
 - Ordinary I/O failures and keyboard interruption after a completed training split publish no partial dataset or manifests. Full output is atomically published only after all splits succeed, and existing non-empty output directories are preserved.
+
+## WAV timestamp reproducibility fix (2026-10-26)
+
+- Investigated the Colab report of 36 passes and two hash mismatches. A local isolated experiment wrote the same float waveform twice, separated by 1.1 seconds. Decoded samples were exactly equal; full WAV hashes differed solely at the `PEAK` timestamp. SoundFile 0.13.1 / libsndfile 1.2.2 reproduced the issue.
+- Added a delayed, directory-changing simulator regression before the fix: it failed on WAV bytes while source hashes and decoded waveforms matched. The earlier same-second tests could pass by timing luck; their full-file comparisons were correct and remain unchanged.
+- Replaced only generated mixture/target serialization with public SciPy float32 WAV writing, which omits the timestamped optional chunk. No change to RNG draws, retries, filtering, precision, SNR scheduling, source files or full-file SHA256 hashing. Mono and stereo sample values were checked against the previous writer and matched exactly.
+- Full local CPU suite: **39 tests passed**, including the delayed regression's source immutability, sample equality, complete WAV-byte/hash equality, exact manifest comparison apart from output paths, and absence of a PEAK chunk. No research training job was launched. Colab execution was not available locally; the environment versions above still apply.

@@ -158,3 +158,48 @@ def test_late_retry_exhaustion_identifies_sample_and_discards_earlier_splits(tmp
         simulate(args)
     assert test_reads==42
     assert not Path(args.output).exists() and not list(tmp_path.glob('.*.incomplete-*'))
+
+
+def test_simulation_file_hashes_ignore_wall_clock_and_output_directory(tmp_path):
+    """PEAK timestamps used to make identical FLOAT samples hash differently."""
+    import struct
+    import time
+    from igcrn.data import sha256
+
+    catalog = source_catalog(tmp_path, bad_kind='speech')
+    source_hashes = {r['path']: sha256(r['path']) for r in rows(catalog)}
+    args = simulation_args(tmp_path, catalog, count=12)
+    simulate(args)
+    # libsndfile's PEAK timestamp uses C time(NULL), not Python time.time().
+    # A real delay prevents two fast runs accidentally passing within one second.
+    time.sleep(1.1)
+    args.output = str(tmp_path/'different-output-directory')
+    simulate(args)
+    assert source_hashes == {p: sha256(p) for p in source_hashes}
+    for split in ('train', 'valid', 'test'):
+        first = rows(tmp_path/f'mixtures/{split}.jsonl')
+        second = rows(Path(args.output)/f'{split}.jsonl')
+        assert len(first) == len(second) == (12 if split == 'train' else 3)
+        for left, right in zip(first, second):
+            for key in ('mixture', 'target'):
+                a, sr_a = sf.read(left[key], dtype='float32', always_2d=True)
+                b, sr_b = sf.read(right[key], dtype='float32', always_2d=True)
+                assert sr_a == sr_b == 16000
+                assert np.array_equal(a, b), 'Signal processing changed the samples'
+                assert left[f'{key}_sha256'] == sha256(left[key])
+                assert right[f'{key}_sha256'] == sha256(right[key])
+                assert Path(left[key]).read_bytes() == Path(right[key]).read_bytes(), 'WAV container bytes changed'
+                assert left[f'{key}_sha256'] == right[f'{key}_sha256']
+                assert sf.info(left[key]).subtype == 'FLOAT'
+                # Check actual RIFF chunks, not a byte substring in the audio payload.
+                data = Path(left[key]).read_bytes()
+                assert data[:4] == b'RIFF' and data[8:12] == b'WAVE'
+                offset = 12
+                while offset < len(data):
+                    chunk, size = struct.unpack_from('<4sI', data, offset)
+                    assert chunk != b'PEAK', 'Do not write a wall-clock-dependent PEAK chunk'
+                    offset += 8 + size + size % 2
+                assert offset == len(data)
+            for key in ('mixture', 'target', 'rir'):
+                right[key] = str(tmp_path/'mixtures'/Path(right[key]).name)
+            assert left == right  # Includes retry count, offsets, geometry, gains and all hashes.

@@ -53,6 +53,8 @@ Silent or near-silent source crops are retried using the same seeded RNG and tha
 
 Simulation publishes the entire dataset only after all three splits succeed, using a hidden sibling staging directory and one atomic directory rename. **Use a new or empty output directory**; existing non-empty outputs are refused to protect frozen data. For example, after an earlier interrupted attempt, use `--output /content/igcrn_data_experiment/mixtures_600` rather than reusing its partial directory. Errors and normal interrupts clean staging files; a force-killed process may leave an explicitly named `.incomplete-*` sibling, never published manifests at the requested output path. Remove such leftovers only after confirming the generating process has stopped. Keep old datasets/manifests for existing checkpoints: the new retry metadata changes manifest hashes, and rejected attempts alter later RNG draws when silence is encountered.
 
+Generated mixtures and targets are IEEE float32 WAVs written with SciPy, without libsndfile's optional `PEAK` chunk and its wall-clock timestamp. Full-file SHA256 comparisons remain strict: the same catalog/seed and numerical environment reproduce bytes even across different write times and output directories. This serialization fix preserves sample precision but changes WAV headers/hashes relative to older generated datasets; keep old frozen data/manifests with their checkpoints. See [the timestamp investigation](docs/REPRODUCIBILITY.md).
+
 Fixed hashes and seed reproduce selection independently of directory ordering. Frozen WAVs, RIR arrays and simulator manifests capture exact mixtures. Noise scaling uses reverberant Mic1 energy; target is clean reverberant Mic1. No target time shifting or dereverberation. Retain attribution if redistributing real speech/noise examples. The legacy `scripts.catalog` remains available for manually supplied full corpora but is not used by the default pipeline.
 
 ## Fair independent ablation
@@ -136,7 +138,7 @@ After a runtime reset, regenerate the same source selection and mixtures and com
 
 ## Validation
 
-Thirty-eight local CPU tests and the original tiny overfit diagnostic passed. Preparation tests use explicit synthetic fixtures; four real selected noise downloads were also checked. The full public speech-archive preparation was not completed locally because of slow transfer. The full model has 1,342,540 parameters. See [validation record and tested environment](docs/VALIDATION.md); the pinned environment and T4 runtime remain unverified.
+39 local CPU tests and the original tiny overfit diagnostic passed. Preparation tests use explicit synthetic fixtures; four real selected noise downloads were also checked. The full public speech-archive preparation was not completed locally because of slow transfer. The full model has 1,342,540 parameters. See [validation record and tested environment](docs/VALIDATION.md); the pinned environment and T4 runtime remain unverified.
 
 ## Limitations and AI disclosure
 
