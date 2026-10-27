@@ -62,3 +62,53 @@ def test_real_audio_exports_have_matching_shapes_and_attribution():
             assert rate == 16000 and audio.shape == (32000,)
             assert np.isfinite(audio).all()
             assert np.mean(audio ** 2) > 1e-12
+
+
+def test_audio_page_metrics_links_and_original_export_mapping():
+    import re
+    page = (ROOT / 'examples/README.md').read_text()
+    assert 'BLOCKED' in page
+    with (ROOT / 'results/v1/per_utterance.csv').open(newline='') as stream:
+        metrics = {(r['id'], r['method']): r for r in csv.DictReader(stream)}
+    for line in page.splitlines():
+        if not line.startswith('| test_'):
+            continue
+        cells = [c.strip() for c in line.strip('|').split('|')]
+        case = cells[0]
+        assert cells[1] == ('Success' if float(metrics[case, 'dual']['si_sdri']) > 0 else 'Failure')
+        assert int(cells[2]) == int(metrics[case, 'dual']['snr_db'])
+        assert cells[-2] == f"{float(metrics[case, 'dual']['si_sdri']):+.4f}"
+        assert cells[-1] == f"{float(metrics[case, 'duplicate']['si_sdri']):+.4f}"
+    for link in re.findall(r'\]\(([^)]+)\)', page):
+        if not link.startswith('http'):
+            assert (ROOT / 'examples' / link).exists(), link
+    # Verify byte identity against the independently retained original V1 inventory.
+    old_inventory = json.loads((ROOT / 'docs/v2/v1_assets_integrity.json').read_text())
+    original = [json.loads(s) for s in (ROOT / 'manifests/evaluation_manifest.jsonl').read_text().splitlines()]
+    exported = json.loads((ROOT / 'examples/v1/manifest.json').read_text())['cases']
+    assert [r['id'] for r in exported] == [r['id'] for r in original[:4]]
+    assert all(Path(e['path']).parent.name == r['id'] for r in exported for e in r['files'].values())
+    for case in exported:
+        for method, entry in case['files'].items():
+            original_name = f"evaluation/{case['id']}_{method}.wav"
+            assert hashlib.sha256((ROOT / entry['path']).read_bytes()).hexdigest() == old_inventory['files'][original_name]
+
+
+def test_existing_waveforms_reproduce_their_own_csv_rows():
+    from scripts.evaluate import sisdr
+    from pystoi import stoi
+    with (ROOT / 'results/v1/per_utterance.csv').open(newline='') as stream:
+        expected = {(r['id'], r['method']): r for r in csv.DictReader(stream)}
+    cases = json.loads((ROOT / 'examples/v1/manifest.json').read_text())['cases']
+    for case in cases:
+        waveforms = {method: sf.read(ROOT / entry['path'], dtype='float32')[0]
+                     for method, entry in case['files'].items()}
+        target = waveforms['target']
+        baseline = sisdr(waveforms['mic1'], target)
+        for method in ('mic1', 'dual', 'duplicate'):
+            actual = {'si_sdr': sisdr(waveforms[method], target),
+                      'si_sdri': sisdr(waveforms[method], target) - baseline,
+                      'stoi': float(stoi(target, waveforms[method], 16000, extended=False))}
+            for metric, value in actual.items():
+                assert np.isclose(value, float(expected[case['id'], method][metric]),
+                                  atol=1e-6, rtol=0), (case['id'], method, metric)

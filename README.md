@@ -88,6 +88,12 @@ python -m scripts.train --data /content/igcrn_v1_reproduction --mode duplicate -
 
 Resume with the same arguments plus `--resume <arm-directory>/last.pt`. Compare equal completed epochs. For evaluation of the **original** checkpoints, follow the [restoration, SHA256 and evaluation commands](docs/CHECKPOINTS.md); original synchronized mixture files are required. Do not regenerate data underneath existing checkpoints. Record `pip freeze`, GPU details, git commit and commands for every new run. Numerical bitwise reproducibility across different device/software stacks is not guaranteed.
 
+## Audio Examples
+
+[**Listen to V1 success/failure examples and inspect per-case metrics →**](examples/README.md)
+
+The ranked four-case selection is currently **BLOCKED**: only `test_00003` is available. Original `test_00000`–`test_00003` exports remain available with their true IDs and unchanged audio. See the listening page for missing-data recovery. Labels describe Dual SI-SDRi only; listening analysis is pending.
+
 ## Checkpoints and Audio Examples
 
 [Checkpoint access and verified metadata](docs/CHECKPOINTS.md): real Drive links exist, but both are currently **restricted**, not public downloads. Owner sharing action is required before interviewer access.
