@@ -19,9 +19,9 @@ The summary, per-utterance metrics, provenance and listening candidates are unmo
 
 Duplicate exceeds Dual by 0.564244 dB SI-SDRi; Dual exceeds Duplicate by 0.009047 STOI. Both differences have the same direction in every SNR group. These are descriptive means from one training seed; no paired confidence intervals or significance claims are available.
 
-## Success/failure candidates, not listening findings
+## Quantitative Case Analysis and Audio Examples
 
-Metric-ranked Dual candidates are `test_00067` (+17.0159 dB) and `test_00105` (+15.1013 dB); negative candidates are `test_00003` (−7.3731 dB) and `test_00096` (−8.2304 dB). These are SI-SDRi values, not perceptual judgments. Listening analysis remains outstanding. The four committed export groups are `test_00000`–`test_00003`, so only one of these ranked candidates is bundled. Full ranked candidate details are in `listening_candidates.json`.
+[Quantitative Case Analysis](CASE_ANALYSIS.md) reports four metric-ranked positive/negative cases from the complete test CSV. Only `test_00003` among those cases has bundled audio. The [four available audio examples](../../examples/README.md) retain their original test IDs `test_00000`–`test_00003` and unmodified WAVs. SI-SDRi signs describe metric outcomes, not human listening assessments.
 
 ## Scope and provenance
 

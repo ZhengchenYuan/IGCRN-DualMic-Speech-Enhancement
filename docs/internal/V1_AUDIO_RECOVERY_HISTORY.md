@@ -1,3 +1,11 @@
+# Historical V1 audio-recovery notes
+
+**Historical record; recovery work has been stopped by the experiment owner.** This document preserves earlier operational instructions, not a current submission requirement or a runnable next step. Public V1 presentation uses four original audio examples and a separate quantitative-only case analysis.
+
+Colab diagnostics verified all six original source hashes. Of the six reconstructed target-case mixture/target WAVs, only `test_00105/target` matched the original manifest. A `test_00001` control target was bitwise identical to the real export. Recomputing scale/gain in the original arithmetic order produced exactly the same float32 candidates as saved-scalar replay, excluding that difference as the cause. No model inference or verified recovery export followed; no original hashes or thresholds were changed. The original numerical environment was not established, and no further reconstruction is planned.
+
+## Archived instructions (superseded)
+
 # Recover the missing ranked V1 cases
 
 Status: **BLOCKED**. Locally available and committed exports are only `test_00000`–`test_00003`. The connected Drive `IGCRN_NIO/evaluation` folder likewise lists only those four groups. Drive searches for `test_00067` and `test_00105` returned no results; the `test_00096` search failed at transport level. This does not prove the recordings do not exist elsewhere. No original synchronized mixtures were available locally, so no new inference was run.

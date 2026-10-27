@@ -1,23 +1,21 @@
-# V1 delivery audit — 2026-10-27
+# V1 submission verification — 2026-10-27
 
-## Verified locally
+The repository presents the completed V1 experiment: two independent 30-epoch training runs and evaluation on the same 120 held-out cases. V2 code is retained as experimental development and contributes no formal results.
 
-- GitHub main matched local `091c431` before delivery edits; no pre-existing working-tree changes were overwritten.
-- Real evaluation summary, 360 method/case metric rows, provenance and listening candidates imported unchanged.
-- Original test manifest imported byte-for-byte: 120 unique cases, 40 at each SNR; recorded SHA256 preserved.
-- Both local final checkpoint binaries match the published SHA256 values. Both are epoch 29 with identical configuration, batch size and train/validation manifest hashes.
-- Four real audio groups imported unchanged: 16 mono IEEE float32 WAVs, 16 kHz, 32,000 samples, finite and non-silent; original recording attribution retained. No listening interpretation is claimed.
-- 41 selected existing V1 and new artifact-consistency tests passed in 5.39 seconds. Command: `python -m pytest -q tests/test_core.py tests/test_prepare_data.py tests/test_simulation.py tests/test_submission.py`.
-- All checked Markdown relative links resolve; notebook code parses; no dataset archive or checkpoint binary is included.
-- No training, V2 execution, dataset download or report generation was performed. Full development tests containing optimizer training and V2 execution were deliberately not run in this delivery-only pass.
+## Verified submission evidence
 
-Test environment: local CPU, Python 3.10, PyTorch 2.3.1, NumPy 1.26.4, SciPy 1.13.1, SoundFile 0.13.1, using the existing temporary environment. This is not a validation of the pinned Colab environment or a fresh metric reevaluation.
+- Original summary, 360 method/case CSV rows, evaluation provenance, candidate selection and both 30-epoch training histories are preserved.
+- The original test manifest contains 120 unique cases, 40 per SNR. Its SHA256 and both final checkpoint SHA256 records are unchanged.
+- Four original audio groups (`test_00000`–`test_00003`) provide 16 unmodified WAVs with source attribution and hashes. Their samples reproduce corresponding CSV SI-SDR, SI-SDRi and STOI values within 1e-6 locally.
+- Quantitative Case Analysis is derived from the complete CSV. Only `test_00003` among its four ranked cases has bundled audio; the other three are quantitative-only observations.
+- Drive metadata lists `anyone: reader` on both linked final checkpoints. No sharing permissions were changed during repository preparation.
+- 47 relevant tests passed in 6.16 seconds: `python -m pytest -q tests/test_core.py tests/test_prepare_data.py tests/test_simulation.py tests/test_submission.py tests/test_export_examples.py`.
+- Repository Markdown relative links resolve. All 29 protected result/manifest/audio artifacts are byte-identical to the previous main revision. Models, loss, scripts, configs and notebooks were not modified.
 
-## Remaining delivery actions
+Tests ran on the existing local CPU environment (Python 3.10, PyTorch 2.3.1, NumPy 1.26.4, SciPy 1.13.1, SoundFile 0.13.1), not a reconstructed historical Colab environment. Tests include synthetic simulation fixtures and inference-only export fixtures, with no optimizer training or V2 execution. The submission workflow uses the same V1-focused tests without optimizer or PRA/V2 execution; no claim is made about its remote run before GitHub reports it.
 
-1. Owner must enable interviewer access to both checkpoint links. Drive metadata showed `shared=false` and owner-only permissions on 2026-10-27; no sharing permissions were changed.
-2. Author will prepare the final report separately. The obsolete pending-results PDF was removed; no replacement PDF was generated. The historical `scripts.make_report` generator remains a development tool and must not be treated as the final report; CI no longer invokes it.
-3. Human listening success/failure analysis remains outstanding; metric-ranked candidates are not perceptual diagnoses.
-4. Exact original-checkpoint reevaluation requires original two-channel mixture/target WAVs at manifest paths. Exact historical training restoration additionally needs original train/valid manifests, selected source catalog/data, RIRs and environment snapshot. These are not bundled or proven accessible via a public archive. Do not upload the entire dataset to Git.
+## Reproducibility scope
 
-No manual download is needed for the requested summary/CSV/provenance/candidates, four exported audio groups or test manifest: all were available locally and imported. Missing original dataset assets are distinct from those supplied evaluation exports. Follow [checkpoint restoration](CHECKPOINTS.md) for verified paths and commands. V2 remains experimental and not formally trained.
+The original full test waveform set was not archived. Original manifests and metric exports preserve the completed evaluation record; the four original audio exports support direct inspection and metric checks. New controlled experiments are supported by the public-data pipeline, configs and fixed seeds, but do not constitute bitwise restoration of all historical V1 data. Historical recovery work was stopped; its notes are archived separately in `docs/internal/V1_AUDIO_RECOVERY_HISTORY.md`.
+
+The final report is prepared separately by the author. Case-specific perceptual findings and paired confidence intervals are not asserted. No training, V2 execution, reconstruction search or GitHub result alteration was performed during this presentation cleanup.

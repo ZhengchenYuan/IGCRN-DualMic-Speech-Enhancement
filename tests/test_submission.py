@@ -67,7 +67,8 @@ def test_real_audio_exports_have_matching_shapes_and_attribution():
 def test_audio_page_metrics_links_and_original_export_mapping():
     import re
     page = (ROOT / 'examples/README.md').read_text()
-    assert 'BLOCKED' in page
+    assert all(word not in page.lower() for word in ('blocked', 'unverified', 'missing audio', 'recovery pending'))
+    audio_ids = []
     with (ROOT / 'results/v1/per_utterance.csv').open(newline='') as stream:
         metrics = {(r['id'], r['method']): r for r in csv.DictReader(stream)}
     for line in page.splitlines():
@@ -75,10 +76,12 @@ def test_audio_page_metrics_links_and_original_export_mapping():
             continue
         cells = [c.strip() for c in line.strip('|').split('|')]
         case = cells[0]
-        assert cells[1] == ('Success' if float(metrics[case, 'dual']['si_sdri']) > 0 else 'Failure')
+        audio_ids.append(case)
+        assert cells[1] == ('Positive' if float(metrics[case, 'dual']['si_sdri']) > 0 else 'Negative')
         assert int(cells[2]) == int(metrics[case, 'dual']['snr_db'])
         assert cells[-2] == f"{float(metrics[case, 'dual']['si_sdri']):+.4f}"
         assert cells[-1] == f"{float(metrics[case, 'duplicate']['si_sdri']):+.4f}"
+    assert audio_ids == ['test_00000', 'test_00001', 'test_00002', 'test_00003']
     for link in re.findall(r'\]\(([^)]+)\)', page):
         if not link.startswith('http'):
             assert (ROOT / 'examples' / link).exists(), link
@@ -112,3 +115,35 @@ def test_existing_waveforms_reproduce_their_own_csv_rows():
             for metric, value in actual.items():
                 assert np.isclose(value, float(expected[case['id'], method][metric]),
                                   atol=1e-6, rtol=0), (case['id'], method, metric)
+
+
+def test_quantitative_case_analysis_matches_csv_and_audio_evidence():
+    import re
+    page = (ROOT / 'results/v1/CASE_ANALYSIS.md').read_text()
+    with (ROOT / 'results/v1/per_utterance.csv').open(newline='') as stream:
+        metrics = {(r['id'], r['method']): r for r in csv.DictReader(stream)}
+    ids = []
+    for line in page.splitlines():
+        if not line.startswith('| test_'):
+            continue
+        cells = [c.strip() for c in line.strip('|').split('|')]
+        case = cells[0]
+        ids.append(case)
+        dual = float(metrics[case, 'dual']['si_sdri'])
+        duplicate = float(metrics[case, 'duplicate']['si_sdri'])
+        assert cells[1] == ('Positive' if dual > 0 else 'Negative')
+        assert int(cells[2]) == int(metrics[case, 'dual']['snr_db'])
+        assert cells[3:6] == [f'{dual:+.4f}', f'{duplicate:+.4f}', f'{dual-duplicate:+.4f}']
+        if case == 'test_00003':
+            assert '[Audio and metrics]' in cells[6]
+        else:
+            assert cells[6] == 'Quantitative only'
+            assert not (ROOT / 'examples' / case).exists()
+    assert ids == ['test_00067', 'test_00105', 'test_00003', 'test_00096']
+    assert '120-case' in page
+    for path in (ROOT / 'README.md', ROOT / 'examples/README.md', ROOT / 'results/v1/CASE_ANALYSIS.md'):
+        content = path.read_text()
+        assert all(word not in content.lower() for word in ('blocked', 'unverified', 'missing audio', 'recovery pending'))
+        for link in re.findall(r'\]\(([^)]+)\)', content):
+            if not link.startswith(('http:', 'https:', '#', 'mailto:')):
+                assert (path.parent / link.split('#')[0]).exists(), (path, link)
