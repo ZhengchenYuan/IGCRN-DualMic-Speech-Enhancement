@@ -6,7 +6,7 @@ import soundfile as sf
 from scipy.signal import fftconvolve
 from scripts.simulate import rir
 from igcrn.data import sha256
-out=Path('examples'); out.mkdir(exist_ok=True); rng=np.random.default_rng(2026); sr=16000
+out=Path('examples/diagnostics'); out.mkdir(parents=True,exist_ok=True); rng=np.random.default_rng(2026); sr=16000
 t=np.arange(sr*2)/sr
 s=.15*np.sin(2*np.pi*(180*t+25*t*t))*(.5+.5*np.sin(2*np.pi*3*t))
 n=rng.normal(0,.06,len(t)); mics=[np.array([2.49,2.5,1.5]),np.array([2.51,2.5,1.5])]

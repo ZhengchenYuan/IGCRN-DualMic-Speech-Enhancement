@@ -19,10 +19,21 @@ All 16 WAVs are mono, IEEE float32, 16 kHz, 32,000 samples (2 seconds). Original
 
 The [separate quantitative analysis](../results/v1/CASE_ANALYSIS.md) reports the highest and lowest Dual SI-SDRi cases from the full test CSV. Among those four ranked cases, only `test_00003` has a bundled audio example. The other three are quantitative-only observations, with no listening or sound-quality claims.
 
+## Non-blind listening observations
+
+The experiment author compared Target, Mic1, Dual and Duplicate for all four cases. Target was judged clear and Mic1 noisy in each case. These are observations from **one listener in a non-blind comparison**, not MOS scores or a formal perceptual experiment.
+
+- **`test_00000`:** Dual and Duplicate sounded similar. Speech was difficult to understand in the first part and clear in the later part, showing variation within the same clip.
+- **`test_00001`:** Speech content was intelligible in both outputs. Duplicate sounded cleaner with occasional muffling; Dual retained a small amount of noise.
+- **`test_00002`:** Duplicate substantially reduced perceived background noise but sounded muffled. Dual retained noise, and speech volume was lower.
+- **`test_00003`:** Duplicate substantially reduced perceived noise, accompanied by reduced speech volume and loss of some content. Dual retained noise, and speech content was difficult to understand.
+
+These observations describe the supplied cases only. Noise suppression alone does not establish speech fidelity, and SI-SDRi does not determine a listener's judgment of every clip. No specific phase, spatial-cue or optimization failure is inferred. The [final report](../report/report_zh.pdf) includes the author's listening summary.
+
 ## Interpretation and source attribution
 
-The target includes Mic1's simulated room response; dereverberation is not required. Audio inspection should compare speech preservation and residual noise against this reverberant reference. No case-specific perceptual diagnosis is asserted here.
+The target includes Mic1's simulated room response; dereverberation is not required. The observations below compare speech preservation and residual noise against that reverberant reference; they do not establish a physical failure mechanism.
 
 Speech derives from Mini LibriSpeech (CC BY 4.0), and environmental noise from ESC-10 (CC BY 3.0). Original per-recording attribution and license URLs are retained in the [export metadata](v1/manifest.json) and [evaluation manifest](../manifests/evaluation_manifest.jsonl). The repository's MIT license does not replace those audio licenses.
 
-These listening exports contain only Mic1, not the original synchronized Mic2 input, so they do not alone reproduce Dual inference. Numbered WAVs and `manifest.json` at this directory's root are earlier synthetic chirp diagnostics, separate from the real V1 speech examples above.
+These listening exports contain only Mic1, not the original synchronized Mic2 input, so they do not alone reproduce Dual inference. Earlier [synthetic chirp diagnostics](diagnostics/README.md) are stored separately from the real V1 speech examples above.

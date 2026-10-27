@@ -1,0 +1,11 @@
+{
+  "file": "report/report_zh.pdf",
+  "sha256": "c7c18c7f40023c19bc4be332f413fe0538be62b3fcb8af5b6146acbc95ad132b",
+  "pages": 2,
+  "page_format": "A4",
+  "language": "Simplified Chinese",
+  "source_filename": "IGCRN复现实验报告.pdf",
+  "report_date": "2026-10-28",
+  "code_and_experiment_commit": "53060b38e707b92f12b656a7793dbf8586823975",
+  "note": "Author-supplied final PDF, copied without modification. The cited commit identifies the experiment/code snapshot; later commits may update submission documentation."
+}

@@ -4,11 +4,11 @@ A focused PyTorch reproduction of [Liu and Zhang, INTERSPEECH 2021](https://arxi
 
 **V1 is a completed experiment:** two independently trained models, 30 epochs per model, and a matched evaluation on **120 held-out test cases**. The repository includes original metrics, a fixed evaluation manifest, training logs, checkpoint hashes and four real audio example groups.
 
-[**Evaluation results**](#evaluation-results) · [**Audio examples**](examples/README.md) · [**Quantitative case analysis**](results/v1/CASE_ANALYSIS.md) · [**Checkpoints**](docs/CHECKPOINTS.md) · [**Reproduction instructions**](#reproduction-instructions)
+[**Final report (Chinese PDF)**](report/report_zh.pdf) · [**Evaluation results**](#evaluation-results) · [**Audio examples**](examples/README.md) · [**Quantitative case analysis**](results/v1/CASE_ANALYSIS.md) · [**Checkpoints**](docs/CHECKPOINTS.md) · [**Reproduction instructions**](#reproduction-instructions)
 
 ## Project Overview
 
-The offline pipeline enhances synchronized 16 kHz audio and outputs one waveform. Dual uses Mic1 + Mic2; Duplicate uses Mic1 + Mic1 with the same architecture, independently initialized and trained. Both use identical training/validation manifests, configuration and training budget. The formal comparison uses each model's final checkpoint after 30 epochs.
+The offline pipeline enhances synchronized 16 kHz audio and outputs one waveform. Dual uses Mic1 + Mic2; Duplicate uses Mic1 + Mic1 with the same architecture, each trained from scratch with seed 2026. Both use identical training/validation manifests, configuration and training budget. The formal comparison uses each model's final checkpoint after 30 epochs.
 
 ## IGCRN Architecture
 
@@ -51,7 +51,7 @@ Macro averages over the same 120 held-out cases, using the same reverberant targ
 
 Both models improve average SI-SDR and STOI over Mic1. Duplicate exceeds Dual by **0.5642 dB SI-SDRi**; Dual exceeds Duplicate by **0.00905 STOI**. This direction holds in all three SNR groups. The second microphone therefore shows **no consistent advantage across metrics** in this experiment. These results do not claim the original paper's performance.
 
-[Per-SNR results](results/v1/README.md), [original summary](results/v1/summary.json), [per-utterance metrics](results/v1/per_utterance.csv), [provenance](results/v1/provenance.json) and [artifact hashes](results/v1/artifact_sha256.json) are available. SI-SDRi subtracts each case's unprocessed Mic1 SI-SDR; STOI uses `pystoi` with `extended=False`. No temporal alignment is applied. No paired confidence intervals or completed listening analysis are claimed.
+[Per-SNR results](results/v1/README.md), [original summary](results/v1/summary.json), [per-utterance metrics](results/v1/per_utterance.csv), [provenance](results/v1/provenance.json) and [artifact hashes](results/v1/artifact_sha256.json) are available. SI-SDRi subtracts each case's unprocessed Mic1 SI-SDR; STOI uses `pystoi` with `extended=False`. No temporal alignment is applied. A [single-author, non-blind listening review](examples/README.md#non-blind-listening-observations) accompanies the four available audio cases. No paired confidence intervals or formal subjective scores are claimed.
 
 ## Reproduction Instructions
 
@@ -106,11 +106,11 @@ Resume with the same arguments plus `--resume <arm-directory>/last.pt`. Compare 
 
 [Download links, configuration and SHA256 verification](docs/CHECKPOINTS.md) document the two original final checkpoints. Checkpoint binaries remain outside Git.
 
-The [final report](report/README.md) is being prepared separately by the author.
+The [final Chinese report (two-page PDF)](report/report_zh.pdf) includes the method, formal results, author listening observations and limitations. [Report provenance and SHA256](report/manifest.json) identify the unmodified author-supplied file.
 
 ## Limitations and Future Work
 
-One seed, a small public-data subset, two-second crops and simplified first-order RIRs limit generalization. Dual has lower average SI-SDRi than Duplicate, despite higher average STOI. Paired confidence intervals and a documented human listening analysis would strengthen interpretation. The current evidence does not establish why Dual has lower SI-SDRi, and spatial simulation limitations are hypotheses rather than demonstrated causes.
+One seed, a small public-data subset, two-second crops and simplified first-order RIRs limit generalization. Dual has lower average SI-SDRi than Duplicate, despite higher average STOI. The single-author non-blind listening observations are case-specific; paired confidence intervals and formal blind listening evaluation would strengthen interpretation. The current evidence does not establish why Dual has lower SI-SDRi, and spatial simulation limitations are hypotheses rather than demonstrated causes.
 
 **V2 is experimental and not formally trained.** It explores high-order PRA room simulation while preserving model/loss and a fair independently trained control. [V2 development status](docs/v2/STAGE1_RESULTS.md), [protocol](docs/v2/README.md) and [disabled-by-default notebook](notebooks/v2_colab.ipynb) are separate from V1 results. V2 has no completed formal training or evaluation results and is not part of the V1 comparison.
 
@@ -119,4 +119,4 @@ One seed, a small public-data subset, two-second crops and simplified first-orde
 - J. Liu and X. Zhang, *Inplace Gated Convolutional Recurrent Neural Network for Dual-channel Speech Enhancement*, INTERSPEECH 2021. [Paper](https://arxiv.org/abs/2107.11968).
 - [Dataset licenses and original recording attribution](docs/DATA_SOURCES.md); [implementation deviations](docs/DEVIATIONS.md).
 
-The implementation was written for this reproduction using PyTorch, NumPy/SciPy, SoundFile and pystoi; dataset audio retains its original licensing. AI assistance was used for implementation, tests, diagnostics and documentation. The author is responsible for understanding the implementation, validating experiments and writing the final report. No AI-generated listening assessment is presented.
+The implementation was written for this reproduction using PyTorch, NumPy/SciPy, SoundFile and pystoi; dataset audio retains its original licensing. AI assistance was used for implementation, tests, diagnostics and documentation. The author is responsible for understanding the implementation, validating experiments and writing the final report. The listening observations were supplied by the author; AI assistance helped edit their wording.

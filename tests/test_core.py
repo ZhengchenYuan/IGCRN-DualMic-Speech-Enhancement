@@ -5,6 +5,9 @@ from scripts.simulate import rir
 from scripts.evaluate import sisdr
 
 torch.set_num_threads(2)
+def test_full_model_parameter_count():
+    assert sum(p.numel() for p in IGCRN().parameters()) == 1_342_540
+
 def test_shape_gradients():
     torch.manual_seed(2026); m=IGCRN(width=8,depth=2); x=torch.randn(2,2,1024)*.1
     z=m.spectrum(x); assert z.shape==(2,257,5)

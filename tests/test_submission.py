@@ -147,3 +147,22 @@ def test_quantitative_case_analysis_matches_csv_and_audio_evidence():
         for link in re.findall(r'\]\(([^)]+)\)', content):
             if not link.startswith(('http:', 'https:', '#', 'mailto:')):
                 assert (path.parent / link.split('#')[0]).exists(), (path, link)
+
+
+def test_final_report_and_separate_diagnostics():
+    from pypdf import PdfReader
+    metadata = json.loads((ROOT / 'report/manifest.json').read_text())
+    pdf = ROOT / metadata['file']
+    assert hashlib.sha256(pdf.read_bytes()).hexdigest() == metadata['sha256']
+    reader = PdfReader(pdf)
+    assert len(reader.pages) == 2
+    for page in reader.pages:
+        assert abs(float(page.mediabox.width) - 595.28) < 1
+        assert abs(float(page.mediabox.height) - 841.89) < 1
+    diagnostics = json.loads((ROOT / 'examples/diagnostics/manifest.json').read_text())
+    assert len(diagnostics) == 4
+    for entry in diagnostics:
+        path = ROOT / entry['path']
+        assert path.parent == ROOT / 'examples/diagnostics'
+        assert hashlib.sha256(path.read_bytes()).hexdigest() == entry['sha256']
+    assert not (ROOT / 'scripts/make_report.py').exists()

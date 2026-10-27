@@ -17,6 +17,9 @@ def sisdr(estimate, target):
     return float(10*np.log10((np.sum(projection**2)+1e-12)/(np.sum((e-projection)**2)+1e-12)))
 
 def main(a):
+    out=Path(a.output)
+    if out.exists() and (not out.is_dir() or any(out.iterdir())):
+        raise FileExistsError(f'Output must be new or empty: {out}. Preserve existing evaluation results.')
     torch.set_num_threads(2)
     ds=Mixtures(a.manifest); models={}; provenance={}
     for mode,path in [('dual',a.dual),('duplicate',a.duplicate)]:
@@ -29,7 +32,7 @@ def main(a):
         else:
             assert reference['config']==ck['config'] and reference['manifest_hashes']==ck['manifest_hashes']
             assert reference['epoch']==ck['epoch'] and reference['batch_size']==ck['batch_size'], 'Unequal budget'
-    out=Path(a.output); out.mkdir(parents=True,exist_ok=True); results=[]
+    out.mkdir(parents=True,exist_ok=True); results=[]
     with torch.no_grad():
         for i,r in enumerate(ds.items):
             x,y=ds[i]; target=y.numpy(); base=sisdr(x[0].numpy(),target)

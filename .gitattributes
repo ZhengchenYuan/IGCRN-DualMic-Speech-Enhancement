@@ -5,3 +5,4 @@ results/v1/*.jsonl -text
 results/v1/per_utterance.csv -text whitespace=cr-at-eol
 examples/v1/*.json -text
 *.wav binary
+*.pdf binary

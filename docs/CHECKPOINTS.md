@@ -44,4 +44,4 @@ python -m scripts.evaluate \
   --output /content/drive/MyDrive/IGCRN_NIO/v1_review_evaluation
 ```
 
-Use a fresh output directory to preserve original evaluation exports. The evaluator checks audio hashes and matched checkpoint configuration/budget. Only load trusted checkpoint files: they include Python RNG state and require pickle-based loading. Exact historical regeneration also requires the original train/valid manifests, source catalog, selected raw recordings, RIRs and environment snapshot; these are not replaced by the current public-data preparation presets.
+Use a fresh output directory to preserve original evaluation exports; the evaluator rejects an existing non-empty output directory. The evaluator checks audio hashes and matched checkpoint configuration/budget. Only load trusted checkpoint files: they include Python RNG state and require pickle-based loading. Exact historical regeneration also requires the original train/valid manifests, source catalog, selected raw recordings, RIRs and environment snapshot; these are not replaced by the current public-data preparation presets.

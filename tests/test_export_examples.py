@@ -15,6 +15,23 @@ from pystoi import stoi
 from scripts import export_examples as exporter
 
 
+@pytest.mark.parametrize('existing_file', [False, True])
+def test_evaluation_preserves_existing_results_before_loading_models(tmp_path, existing_file):
+    from scripts.evaluate import main as evaluate
+    out = tmp_path / 'evaluation'
+    if existing_file:
+        out.write_bytes(b'original output file')
+        original = out
+    else:
+        out.mkdir()
+        original = out / 'summary.json'
+        original.write_bytes(b'original saved evaluation')
+    before = original.read_bytes()
+    with pytest.raises(FileExistsError, match='new or empty'):
+        evaluate(argparse.Namespace(output=out))
+    assert original.read_bytes() == before
+
+
 def test_selection_uses_ids_not_positions():
     items = [{'id': 'test_00003'}, {'id': 'test_00067'}]
     assert exporter.select_indices(items, ['test_00067', 'test_00003']) == [1, 0]

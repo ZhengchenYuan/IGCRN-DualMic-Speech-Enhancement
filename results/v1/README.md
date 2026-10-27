@@ -21,7 +21,7 @@ Duplicate exceeds Dual by 0.564244 dB SI-SDRi; Dual exceeds Duplicate by 0.00904
 
 ## Quantitative Case Analysis and Audio Examples
 
-[Quantitative Case Analysis](CASE_ANALYSIS.md) reports four metric-ranked positive/negative cases from the complete test CSV. Only `test_00003` among those cases has bundled audio. The [four available audio examples](../../examples/README.md) retain their original test IDs `test_00000`–`test_00003` and unmodified WAVs. SI-SDRi signs describe metric outcomes, not human listening assessments.
+[Quantitative Case Analysis](CASE_ANALYSIS.md) reports four metric-ranked positive/negative cases from the complete test CSV. Only `test_00003` among those cases has bundled audio. The [four available audio examples](../../examples/README.md) retain their original test IDs `test_00000`–`test_00003` and unmodified WAVs. SI-SDRi signs describe metric outcomes, not human listening assessments. The author’s separate [non-blind listening notes](../../examples/README.md#non-blind-listening-observations) cover only the four available exports.
 
 ## Scope and provenance
 

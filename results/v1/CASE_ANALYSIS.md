@@ -21,4 +21,4 @@ Only `test_00003` among these four ranked cases has bundled audio. `test_00067`,
 
 The [available audio examples](../../examples/README.md) are instead the original exports for `test_00000`, `test_00001`, `test_00002` and `test_00003`, with four WAVs per case. Quantitative ranking and audio availability are separate selection criteria.
 
-These descriptive examples do not establish a failure mechanism, statistical significance, or a perceptual quality ranking. One seed, a small synthetic dataset, two-second crops and limited first-order room simulation constrain interpretation. Paired confidence intervals and a documented human listening analysis would strengthen subsequent analysis.
+These descriptive examples do not establish a failure mechanism, statistical significance, or a perceptual quality ranking. One seed, a small synthetic dataset, two-second crops and limited first-order room simulation constrain interpretation. The author’s [single-listener non-blind observations](../../examples/README.md#non-blind-listening-observations) cover the four available exports; they do not substitute for paired confidence intervals or a formal blind listening study.
