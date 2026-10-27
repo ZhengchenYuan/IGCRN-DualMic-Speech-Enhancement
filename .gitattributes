@@ -1,0 +1,7 @@
+# Preserve original evaluation export bytes and provenance hashes on all platforms.
+manifests/evaluation_manifest.jsonl -text
+results/v1/*.json -text
+results/v1/*.jsonl -text
+results/v1/per_utterance.csv -text whitespace=cr-at-eol
+examples/v1/*.json -text
+*.wav binary
