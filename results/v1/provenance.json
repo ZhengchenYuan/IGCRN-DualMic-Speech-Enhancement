@@ -1,0 +1,11 @@
+{
+  "dual": {
+    "checkpoint_sha256": "3f002a46900bc754196e0e395457e70bbea5dbcfc06f88924de683208ed4bd3a",
+    "epoch": 29
+  },
+  "duplicate": {
+    "checkpoint_sha256": "1bde828ac8d03d6fce63e2db7a0513934e34ca8eee40236ffa65e0cd73f9d5f3",
+    "epoch": 29
+  },
+  "evaluation_manifest_sha256": "08d960e741133f37b711606a954a51c15a944e904701d3f910a1bb2f98091f5e"
+}

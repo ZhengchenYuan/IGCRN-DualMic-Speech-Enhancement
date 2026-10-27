@@ -1,4 +1,4 @@
-The evaluation manifest is intentionally empty until actual data is simulated and frozen. It is not an evaluated test set.
+The committed `evaluation_manifest.jsonl` is the original V1 test manifest: 120 held-out cases, 40 per SNR. Its byte-for-byte SHA256 is `08d960e741133f37b711606a954a51c15a944e904701d3f910a1bb2f98091f5e`. It retains original Colab `/content/` paths. The historical directory name `igcrn_experiment_v2` belongs to the completed V1 dataset and does not indicate a completed PRA/V2 experiment. See [checkpoint restoration](../docs/CHECKPOINTS.md). Train/valid manifests, full mixture WAVs and RIR arrays are not bundled.
 
 ## Automatic source catalog
 

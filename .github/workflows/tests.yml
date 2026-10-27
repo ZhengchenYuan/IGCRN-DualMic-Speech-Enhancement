@@ -12,4 +12,3 @@ jobs:
       - run: pip install -e .
       - run: python -m pytest -q
       - run: python -m scripts.overfit
-      - run: python -m scripts.make_report

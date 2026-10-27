@@ -9,3 +9,10 @@ runs/
 checkpoints/
 .env
 .DS_Store
+
+.ipynb_checkpoints/
+.env.*
+*.pt.tmp
+*.tar.gz
+raw/
+rir_cache/
